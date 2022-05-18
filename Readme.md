@@ -11,5 +11,7 @@ User Story Mapping: https://miro.com/welcomeonboard/ZzVhQk5qa3dtQUpNeXpqWm0xdmMy
 
   A. La carpeta "Criterio de DONE" contiene un documento de texto donde se plantea el Criterio de DONE.
  
-  B. La carpeta UserStoryMapping contiene:
+  B. La carpeta "UserStoryMapping" contiene:
         -La imagen correspondiente al userStoryMapping realizado.
+
+2. La carperta "Pagina" contiene todo el codigo fuente de la pagina web.
