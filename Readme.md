@@ -1,7 +1,6 @@
 # Metodologias Grupo 4
 #### Github del Trabajo Practico Especial de la materia: Introducción a las Metodologías de Desarrollo de Software.
-#
-#
+
 
 | Herramienta | LINK |
 | ------ | ------ |
