@@ -5,7 +5,7 @@ class TurnoFacilModel
   function __construct()
   {
     $this->db = new PDO('mysql:host=localhost;'
-    .'dbname=;charset=utf8'
+    .'dbname=turnofacil;charset=utf8'
     , 'root', '');
   }
 

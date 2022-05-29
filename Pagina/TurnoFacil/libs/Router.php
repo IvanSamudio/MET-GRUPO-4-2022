@@ -12,7 +12,7 @@ if (!empty($_GET['action'])) {
 
 //TPE WEB 2
 $params = explode('/', $action);
-$bookController = new BookController();
+$bookController = new MedicoController();
 $writerController = new WriterController();
 $userController = new UserController();
 switch ($params[0]) {
