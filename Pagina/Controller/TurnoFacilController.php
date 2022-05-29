@@ -19,6 +19,8 @@ class TurnoFacilController{
     //$Turnos = $this->model->GetTurnos();
     $this->view->Mostrar($this->Titulo);
   }
+
+  
 }
 
- ?>
+?>
