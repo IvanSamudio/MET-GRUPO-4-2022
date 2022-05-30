@@ -1,6 +1,6 @@
 <?php
 
-require_once "controllers/Controller.php";
+require_once "controllers/MedicoController.php";
 
 define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']) . '/');
 if (!empty($_GET['action'])) {
@@ -9,22 +9,18 @@ if (!empty($_GET['action'])) {
     $action = 'home';
 }
 
-
-//TPE WEB 2
 $params = explode('/', $action);
-$bookController = new MedicoController();
-$writerController = new WriterController();
-$userController = new UserController();
+$medicoController = new MedicoController();
 switch ($params[0]) {
     case 'home':
         $bookController->getBooks();
         break;
-    case 'libros':
+    case 'paciente':
         if (isset($params[1]))
 
             switch ($params[1]) {
-                case 'detalle':
-                    $bookController->getBook($params[2]);
+                case 'filtrar_medicos':
+                    $medicoController->mostrarTodasEspecialidadesyObra();
                     break;
                 case 'agregar':
                     $bookController->addBook();
@@ -47,7 +43,7 @@ switch ($params[0]) {
             $bookController->getBooks();
         break;
 
-    case 'escritores':
+    case 'turnos':
         if (isset($params[1]))
             switch ($params[1]) {
                 case 'agregar':
@@ -69,40 +65,6 @@ switch ($params[0]) {
                     $writerController->getWriters();
                     break;
             }
-        else
-            $writerController->getWriters();
-        break;
-    case 'login':
-        $userController->showLogin();
-        break;
-    case 'verify':
-        $userController->verifyLogin();
-        break;
-    case 'logout':
-        $userController->logout();
-        break;
-    case 'verify-register':
-        $userController->registerUser();
-        break;
-    case 'register':
-        $userController->showRegister();
-        break;
-    case 'usuarios':
-        if (isset($params[1]))
-            switch ($params[1]) {
-                case 'editar':
-                    $userController->editUserForm($params[2]);
-                    break;
-                case 'edit':
-                    $userController->editUser($params[2]);
-                    break;
-                case 'eliminar':
-                    $userController->deleteUser($params[2]);
-                    break;
-            }
-        else
-            $userController->getUsers();
-        break;
     default:
         echo ('404 Page not found');
         break;
