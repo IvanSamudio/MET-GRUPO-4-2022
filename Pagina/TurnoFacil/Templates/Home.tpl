@@ -17,7 +17,7 @@
 
 <div class="contBotones">
   <a href="filtrar_medicos" class="btn btn-primary btn-lg botonesHome btn-izq">SACAR TURNOS</a>
-  <a href="verTurnos" class="btn btn-primary btn-lg botonesHome btn-der">VER TURNOS</a>
+  <a href="ver_Turnos" class="btn btn-primary btn-lg botonesHome btn-der">VER TURNOS</a>
 </div>
 </div>
 </main>
