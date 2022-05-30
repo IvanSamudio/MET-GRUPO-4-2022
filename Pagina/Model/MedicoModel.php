@@ -15,6 +15,12 @@ class MedicoModel{
         return $sentencia->fetchAll(PDO::FETCH_ASSOC);
       }
 
+    function getMedicoPorMatricula($nro_matricula){
+        $sentencia = $this->db->prepare("SELECT * FROM medico WHERE nro_matricula = ?");
+        $sentencia->execute($nro_matricula);
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
+    }
+
     function GetMedicosPorEspecialidad($especialidad){
         $sentencia = $this->db->prepare("SELECT * FROM medico WHERE especialidad = ? ");
         $sentencia->execute($especialidad);
