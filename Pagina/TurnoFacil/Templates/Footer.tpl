@@ -1,5 +1,19 @@
-    <footer>
-    </footer>
+  <!-- Footer -->
+  <footer class="footer">
+  <div class="logoFooter"><img id="logo-shelby" src="../TurnoFacil/Images/logo-transparente.png" alt="logo" srcset="" width="200px" height="100px"></div>
+  <div class="datosFooter">
+        <ul class="">
+            <li>
+              <a href="#!" class="text-white"><i class="bi bi-facebook"></i> @TurnoFacil</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white"><i class="bi bi-instagram"></i> @TurnoFacil</a>
+            </li>
+          </ul>
+    </div>
+  <div class="footerText"><h4>"Agregando cuidado a su vida"</h2></div>
+  </footer>
+  <!-- Footer -->
 
 
 
