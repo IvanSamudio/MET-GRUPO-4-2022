@@ -1,0 +1,99 @@
+.container{
+    min-width: 92%;
+}
+
+.carousel-item{
+    height: 600px !important;
+    
+}
+
+.carousel-item img{
+    min-height: 100% !important; 
+    max-height: 100% !important;
+}
+
+.contBotones{
+    min-height: 200px !important;
+    width: 100%;
+    background-color: rgb(245, 238, 238) !important;
+}
+
+.botonesHome{
+    background-color: #69bfb7 !important;
+    margin-top: 5%;
+    padding: 15%;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-color: #559992;
+}
+
+.btn-izq{
+    margin-left: 7%;
+}
+
+.btn-der{
+    float: right;
+    margin-right: 7%;
+}
+
+.footer{
+    background-color: #69bfb7 !important;
+    text-decoration: none !important;
+    display: inline-block;
+    min-width: 100%;
+    border-top: 2px solid #559992;
+}
+
+.logoFooter{
+    margin-left: 5%;
+    padding-top: 2%;
+    width: auto;
+    float:left;
+    padding-right: 2%;
+    border-right: 5px solid white;
+}
+
+.datosFooter{
+    text-decoration: none !important;
+    float:left;
+    padding-right: 10%;
+}
+
+.datosFooter ul{
+    padding-top: 10%;
+    list-style: none !important;
+    font-size:150%;
+}
+
+.datosFooter a{
+    text-decoration: none;
+}
+
+.footerText{
+    text-align: right;
+    padding-left: 30%;
+    padding-right: 8%;
+    padding-top: 2%;
+    color: white;
+}
+
+@media screen and (max-width: 1655px) {
+    .datosFooter ul{
+        font-size:medium;
+    }
+
+    .datosFooter{
+        max-width: 30%;
+    }
+    
+
+
+    .logoFooter img{
+        width: auto;
+        max-width: 100%;
+    }
+
+    .logoFooter{
+        max-width: 15%;
+    }
+}
