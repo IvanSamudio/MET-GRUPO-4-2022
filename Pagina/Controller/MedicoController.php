@@ -8,7 +8,7 @@ class MedicoController{
 
     private $model;
     private $view;
-    private $Fview
+    private $FiltradoView;
 
     function __construct(){
         $this->view = new MedicoView;
@@ -43,9 +43,14 @@ class MedicoController{
     {
         $obraSociales = $this->model-> getAllObraSociales();
         $especialidades = $this->model->getAllEspecialidades();
-
-        if (isset($obraSociales) && isset($especialidades))
+        
+        if (isset($obraSociales) && isset($especialidades)){
+            echo("ENTRO");
             $this->FiltradoView->showFiltrado($obraSociales,$especialidades);
+        }else{
+            echo("hola");
+        }
+            
     }
 
   

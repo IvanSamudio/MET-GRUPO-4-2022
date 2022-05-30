@@ -5,6 +5,8 @@ define('PARAMS', 1);
 
 require_once "config/ConfigApp.php";
 require_once "../Controller/TurnoFacilController.php";
+require_once "../Controller/MedicoController.php";
+
 
 function parseURL($url)
 {

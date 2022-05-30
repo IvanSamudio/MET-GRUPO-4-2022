@@ -1,25 +1,24 @@
 <?php
 
-require_once "libs/smarty-3.1.39/libs/Smarty.class.php";
+require_once('libs/Smarty.class.php');
 
-class writerView
+class FiltradoView
 {
 
-    private $smarty;
+    private $Smarty;
 
     public function __construct()
     {
-        $this->smarty = new Smarty();
-        $this->smarty->assign('BASE_URL', BASE_URL);
-
+        $this->Smarty = new Smarty();
+        $r = $this->Smarty->assign('root', "http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
     }
 
     public function showFiltrado($obrasSociales, $especialidades)
     {
-        $this->smarty->assign('obraSociales', $obrasSociales);
-        $this->smarty->assign('especialidades', $especialidades);
-        $this->smarty->assign('title', 'Elegi tu con libertad lo mejor para tu salud');
-        $this->smarty->display('templates/FiltradoPrincipal.tpl');
+        $this->Smarty->assign('obraSociales', $obrasSociales);
+        $this->Smarty->assign('especialidades', $especialidades);
+        $this->Smarty->assign('Titulo', 'Elegi tu con libertad lo mejor para tu salud');
+        $this->Smarty->display('Templates/FiltradoPrincipal.tpl');
     }
 
     
