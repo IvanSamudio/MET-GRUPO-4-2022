@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-05-30 06:16:16
+/* Smarty version 4.1.0, created on 2022-05-30 19:01:55
   from 'C:\xampp\htdocs\proyectos\Proyecto\MET-GRUPO-4-2022\Pagina\TurnoFacil\templates\Footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6294451007ed79_18528020',
+  'unifunc' => 'content_6294f8838afb54_41679232',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c05443987b829ac4507e99d11bdab6d957727117' => 
     array (
       0 => 'C:\\xampp\\htdocs\\proyectos\\Proyecto\\MET-GRUPO-4-2022\\Pagina\\TurnoFacil\\templates\\Footer.tpl',
-      1 => 1653884173,
+      1 => 1653929777,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6294451007ed79_18528020 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6294f8838afb54_41679232 (Smarty_Internal_Template $_smarty_tpl) {
 ?>  <!-- Footer -->
   <footer class="footer">
   <div class="logoFooter"><img id="logo-shelby" src="../TurnoFacil/Images/logo-transparente.png" alt="logo" srcset="" width="200px" height="100px"></div>

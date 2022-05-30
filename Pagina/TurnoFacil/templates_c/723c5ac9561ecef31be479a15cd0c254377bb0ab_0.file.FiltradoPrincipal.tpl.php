@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-05-30 18:08:59
+/* Smarty version 4.1.0, created on 2022-05-30 19:11:37
   from 'C:\xampp\htdocs\proyectos\Proyecto\MET-GRUPO-4-2022\Pagina\TurnoFacil\Templates\FiltradoPrincipal.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6294ec1b4fc138_82886669',
+  'unifunc' => 'content_6294fac98772a8_96725434',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '723c5ac9561ecef31be479a15cd0c254377bb0ab' => 
     array (
       0 => 'C:\\xampp\\htdocs\\proyectos\\Proyecto\\MET-GRUPO-4-2022\\Pagina\\TurnoFacil\\Templates\\FiltradoPrincipal.tpl',
-      1 => 1653925312,
+      1 => 1653930694,
       2 => 'file',
     ),
   ),
@@ -22,10 +22,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:Footer.tpl' => 1,
   ),
 ),false)) {
-function content_6294ec1b4fc138_82886669 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6294fac98772a8_96725434 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:Header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
+<main class="container">
 <h1 class="text-uppercase fw-light container" style="width: 60rem"><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
 </h1>
 
@@ -67,6 +68,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     
     <button class="btn btn-warning m-2" type="submit">Ver Medicos</button> //muestra otro tpl con los medicos yla especialidad y obra social elegida 
 </form>
+</main>
 
 
 <?php $_smarty_tpl->_subTemplateRender("file:Footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);

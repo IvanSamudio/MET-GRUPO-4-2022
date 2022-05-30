@@ -1,30 +1,18 @@
 <?php
-<<<<<<< HEAD
-/* Smarty version 4.1.0, created on 2022-05-30 18:09:25
-=======
-/* Smarty version 4.1.0, created on 2022-05-30 05:23:02
->>>>>>> origin/METG4-21-Crear_interfaz_grafica
+/* Smarty version 4.1.0, created on 2022-05-30 19:04:38
   from 'C:\xampp\htdocs\proyectos\Proyecto\MET-GRUPO-4-2022\Pagina\TurnoFacil\templates\Header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-<<<<<<< HEAD
-  'unifunc' => 'content_6294ec35a3c2d4_55230476',
-=======
-  'unifunc' => 'content_62943896043af6_69641936',
->>>>>>> origin/METG4-21-Crear_interfaz_grafica
+  'unifunc' => 'content_6294f926d51da7_86084007',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f872e308421a30135307161b7c4ec6c18991d24f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\proyectos\\Proyecto\\MET-GRUPO-4-2022\\Pagina\\TurnoFacil\\templates\\Header.tpl',
-<<<<<<< HEAD
-      1 => 1653926962,
-=======
-      1 => 1653880978,
->>>>>>> origin/METG4-21-Crear_interfaz_grafica
+      1 => 1653930276,
       2 => 'file',
     ),
   ),
@@ -32,26 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-<<<<<<< HEAD
-function content_6294ec35a3c2d4_55230476 (Smarty_Internal_Template $_smarty_tpl) {
-?><!DOCTYPE html>
-<html  lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="css/style.css" rel="stylesheet">
-
-    <title>TurnoFacil</title>
-</head>
-<body>
-
-
-
-<?php }
-=======
-function content_62943896043af6_69641936 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6294f926d51da7_86084007 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="es">
 <head>
@@ -70,6 +39,6 @@ function content_62943896043af6_69641936 (Smarty_Internal_Template $_smarty_tpl)
     <div class="logo">
         <img id="logo-shelby" src="../TurnoFacil/Images/logo.png" alt="logo" srcset="" width="100px" height="100px">
     </div>
-</header><?php }
->>>>>>> origin/METG4-21-Crear_interfaz_grafica
+</header>
+<?php }
 }

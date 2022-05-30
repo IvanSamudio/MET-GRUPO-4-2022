@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 
 define('ACTION', 0);
 define('PARAMS', 1);
@@ -32,4 +32,4 @@ if(isset($_GET['action'])){
   }
 }
 
- ?> -->
+ ?>

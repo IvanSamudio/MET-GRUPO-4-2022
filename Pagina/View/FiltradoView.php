@@ -17,7 +17,8 @@ class FiltradoView
     {
         $this->Smarty->assign('obraSociales', $obrasSociales);
         $this->Smarty->assign('especialidades', $especialidades);
-        $this->Smarty->assign('Titulo', 'Elegi tu con libertad lo mejor para tu salud');
+        $this->Smarty->assign('title', 'Elegi tu con libertad lo mejor para tu salud');
+        $this->Smarty->assign('Titulo', 'Turno facil');
         $this->Smarty->display('Templates/FiltradoPrincipal.tpl');
     }
 

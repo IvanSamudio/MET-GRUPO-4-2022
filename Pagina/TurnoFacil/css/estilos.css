@@ -77,6 +77,10 @@
     color: white;
 }
 
+.container{
+    min-height: 360px !important;
+}
+
 @media screen and (max-width: 1655px) {
     .datosFooter ul{
         font-size:medium;

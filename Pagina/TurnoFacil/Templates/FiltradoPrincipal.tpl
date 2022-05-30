@@ -1,5 +1,6 @@
 {include file="Header.tpl"}
 
+<main class="container">
 <h1 class="text-uppercase fw-light container" style="width: 60rem">{$title}</h1>
 
 <form class="container mb-3" style="width: 60rem" action="" method="POST">
@@ -22,6 +23,7 @@
     
     <button class="btn btn-warning m-2" type="submit">Ver Medicos</button> //muestra otro tpl con los medicos yla especialidad y obra social elegida 
 </form>
+</main>
 
 
 {include file="Footer.tpl"}

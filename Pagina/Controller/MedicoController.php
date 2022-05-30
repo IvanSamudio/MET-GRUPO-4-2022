@@ -45,10 +45,7 @@ class MedicoController{
         $especialidades = $this->model->getAllEspecialidades();
         
         if (isset($obraSociales) && isset($especialidades)){
-            echo("ENTRO");
             $this->FiltradoView->showFiltrado($obraSociales,$especialidades);
-        }else{
-            echo("hola");
         }
             
     }
