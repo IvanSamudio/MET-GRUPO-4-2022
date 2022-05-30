@@ -5,7 +5,7 @@ class TurnoFacilModel
   function __construct()
   {
     $this->db = new PDO('mysql:host=localhost;'
-    .'dbname=;charset=utf8'
+    .'dbname=turnofacil;charset=utf8'
     , 'root', '');
   }
 
@@ -18,10 +18,12 @@ class TurnoFacilModel
           m.inicio_horario_atencion, m.fin_horario_atencion
          FROM turno t
          INNER JOIN medico m ON t.nro_matricula = m.nro_matricula
-         WHERE (nro_matricula = ? 
+         WHERE (t.nro_matricula = ? 
          AND horario_turno >= CURRENT_TIMESTAMP)");
-    $sentencia->execute($nro_matricula);
-    return $sentencia->fetchAll(PDO::FETCH_OBJ);    
+    $sentencia->execute([$nro_matricula]);
+    $turnos = $sentencia->fetchAll(PDO::FETCH_OBJ); 
+    return $turnos;
+
   }
 
   /* EJEMPLOS DE GET,UPDATE,DELETE,INSERT

@@ -20,7 +20,14 @@ class TurnoFacilController{
     $this->view->Mostrar($this->Titulo);
   }
 
-  function getTurnosMedico($nro_matricula) {
+  function getTurnosMedico($params) {
+    $nro_matricula = $params[0];
+    /* Por ahora lo tacho pero es un buen inicio para mejorar el calendario
+    $dateYear = date('Y'); $dateMonth = date('m'); $dateDay = date('d');
+    echo $dateYear; echo "  "; echo $dateMonth; echo "  "; echo $dateDay; echo "  ";
+    $daysInMonth = cal_days_in_month(CAL_GREGORIAN, $dateMonth, $dateDay);
+    echo $daysInMonth; */
+
     $turnosMedico = $this->model->getTurnosMedico($nro_matricula);
     $this->view->mostrarCalendarioTurnosDisponibles($turnosMedico);
   }
