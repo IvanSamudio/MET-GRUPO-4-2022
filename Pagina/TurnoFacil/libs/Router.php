@@ -12,12 +12,14 @@ if (!empty($_GET['action'])) {
 
 //TPE WEB 2
 $params = explode('/', $action);
+$turnoFacilController = new TurnoFacilController();
+
 $bookController = new BookController();
 $writerController = new WriterController();
 $userController = new UserController();
 switch ($params[0]) {
-    case 'home':
-        $bookController->getBooks();
+    case ' ':
+        $turnoFacilController->home();
         break;
     case 'libros':
         if (isset($params[1]))
