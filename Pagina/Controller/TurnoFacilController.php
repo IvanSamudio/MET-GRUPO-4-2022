@@ -20,6 +20,11 @@ class TurnoFacilController{
     $this->view->Mostrar($this->Titulo);
   }
 
+  function getTurnosMedico($nro_matricula) {
+    $turnosMedico = $this->model->getTurnosMedico($nro_matricula);
+    $this->view->mostrarCalendarioTurnosDisponibles($turnosMedico);
+  }
+
   
 }
 

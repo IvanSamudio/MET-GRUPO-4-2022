@@ -12,6 +12,7 @@
 </head>
 <body>
 
+<header>
     <div class="logo">
         <img id="logo-shelby" src="../TurnoFacil/Images/logo.png" alt="logo" srcset="">
     </div>

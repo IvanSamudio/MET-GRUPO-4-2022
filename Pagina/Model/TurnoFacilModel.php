@@ -9,6 +9,14 @@ class TurnoFacilModel
     , 'root', '');
   }
 
+  function getTurnosMedico($nro_matricula) {
+    $sentencia = $this->db->prepare("SELECT * FROM turno WHERE nro_matricula = ?");
+    //$sentencia = $this->db->prepare("SELECT * FROM turno WHERE nro_matricula = ? 
+    //  GROUP BY extract(year FROM horario) ORDER BY extract(year FROM horario));
+    $sentencia->execute($nro_matricula);
+    return $sentencia->fetchAll(PDO::FETCH_OBJ);    
+  }
+
   /* EJEMPLOS DE GET,UPDATE,DELETE,INSERT
   
   function GetTurnos(){
