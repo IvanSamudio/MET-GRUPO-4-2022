@@ -44,6 +44,7 @@ class MedicoController{
         $obraSociales = $this->model-> getAllObraSociales();
         $especialidades = $this->model->getAllEspecialidades();
         
+        var_dump($especialidades);
         if (isset($obraSociales) && isset($especialidades)){
             $this->FiltradoView->showFiltrado($obraSociales,$especialidades);
         }

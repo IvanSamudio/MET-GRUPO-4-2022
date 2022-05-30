@@ -16,7 +16,7 @@
 </div>
 
 <div class="contBotones">
-  <a href="sacarTurnos" class="btn btn-primary btn-lg botonesHome btn-izq">SACAR TURNOS</a>
+  <a href="sacar_turno" class="btn btn-primary btn-lg botonesHome btn-izq">SACAR TURNOS</a>
   <a href="verTurnos" class="btn btn-primary btn-lg botonesHome btn-der">VER TURNOS</a>
 </div>
 </div>
