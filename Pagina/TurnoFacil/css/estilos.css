@@ -1,0 +1,21 @@
+.container{
+    background-color: gainsboro !important;
+    min-width: 90%;
+}
+
+.carousel-item{
+    height: 600px !important;
+    
+}
+
+.carousel-item img{
+    min-height: 100% !important; 
+    max-height: 100% !important;
+}
+
+.contBotones{
+    background-color: aquamarine;
+    min-height: 200px !important;
+    width: 100%;
+    text-align: center;
+}
