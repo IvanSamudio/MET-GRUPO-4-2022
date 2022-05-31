@@ -21,6 +21,11 @@ class TurnoFacilView
     $this->Smarty->assign('turnos', $diasDisponibles);
     $this->Smarty->display('templates/CalendarioTurnos.tpl');
   }
+
+  function mostrarHorariosTurnosDisponibles($horasDisponibles) {
+    $this->Smarty->assign('horas', $horasDisponibles);
+    $this->Smarty->display('templates/HorariosTurnos.tpl');
+  }
   
 }
   ?>

@@ -8,6 +8,7 @@ class ConfigApp
         ''=> 'TurnoFacilController#Home',
         'MostrarTurnos' => 'TurnoFacilController#getTurnosMedico',
         'filtrar_medicos'=> 'MedicoController#mostrarTodasEspecialidadesyObra',
+        'HorariosTurnos'=> 'TurnoFacilController#getHorariosTurnoMedico',
     ];
 
 }
