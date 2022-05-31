@@ -3,19 +3,18 @@
 <main class="container">
 <h1 class="text-uppercase fw-light container" style="width: 60rem">{$title}</h1>
 
-<form class="container mb-3" style="width: 60rem" action="" method="POST">
-
+<form class="container mb-3" style="width: 60rem" action="filtro_medico" method="POST">
     <label class="form-label">Filtrar por Especialidad</label>
-    <select class="form-select" aria-label="Default select example">
-    <option selected>Selecccionar Especialidad</option>
+    <select id="especialidad" class="form-select" aria-label="Default select example">
+    <option  disabled selected>Seleccionar Especialidad</option>
     {foreach from=$especialidades item=$especialidad}
     <option value="{$especialidad["especialidad"]}">{$especialidad["especialidad"]}</option>
     {/foreach}
     </select>
 
     <label class="form-label">Filtrar por Obra Social</label>
-    <select class="form-select" aria-label="Default select example">
-    <option selected>Seleccionar obra social</option>
+    <select id="obra_social" class="form-select" aria-label="Default select example">
+    <option disabled selected>Seleccionar obra social</option>
     {foreach from=$obraSociales item=$obraSocial}
     <option value="{$obraSocial["nombre_obra_social"]}">{$obraSocial["nombre_obra_social"]}</option>
     {/foreach}
