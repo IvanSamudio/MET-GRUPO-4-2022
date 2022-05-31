@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-05-31 20:15:28
+/* Smarty version 4.1.0, created on 2022-05-31 20:40:51
   from 'C:\xampp\htdocs\Meto\MET-GRUPO-4-2022\Pagina\TurnoFacil\Templates\FiltradoPrincipal.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_62965b409c7355_05729412',
+  'unifunc' => 'content_629661334fb271_45119461',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3922eb7eccd10e60dfb4eceaea9db6da1fbfe9d3' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Meto\\MET-GRUPO-4-2022\\Pagina\\TurnoFacil\\Templates\\FiltradoPrincipal.tpl',
-      1 => 1653948534,
+      1 => 1654022426,
       2 => 'file',
     ),
   ),
@@ -22,13 +22,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:Footer.tpl' => 1,
   ),
 ),false)) {
-function content_62965b409c7355_05729412 (Smarty_Internal_Template $_smarty_tpl) {
+function content_629661334fb271_45119461 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:Header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 <main class="container">
-<h1 class="text-uppercase fw-light container" style="width: 60rem"><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
-</h1>
+<h2 class="tittle"><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
+</h2>
 
 <form class="container mb-3" style="width: 60rem" action="" method="POST">
 
@@ -41,8 +41,8 @@ $_smarty_tpl->tpl_vars['especialidad']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['especialidad']->value) {
 $_smarty_tpl->tpl_vars['especialidad']->do_else = false;
 ?>
-    <option value="<?php echo $_smarty_tpl->tpl_vars['especialidad']->value->especialidad;?>
-"><?php echo $_smarty_tpl->tpl_vars['especialidad']->value->especialidad;?>
+    <option value="<?php echo $_smarty_tpl->tpl_vars['especialidad']->value["especialidad"];?>
+"><?php echo $_smarty_tpl->tpl_vars['especialidad']->value["especialidad"];?>
 </option>
     <?php
 }
@@ -58,8 +58,8 @@ $_smarty_tpl->tpl_vars['obraSocial']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['obraSocial']->value) {
 $_smarty_tpl->tpl_vars['obraSocial']->do_else = false;
 ?>
-    <option value="<?php echo $_smarty_tpl->tpl_vars['obraSocial']->value->obraSocial;?>
-"><?php echo $_smarty_tpl->tpl_vars['obraSocial']->value->obraSocial;?>
+    <option value="<?php echo $_smarty_tpl->tpl_vars['obraSocial']->value["nombre_obra_social"];?>
+"><?php echo $_smarty_tpl->tpl_vars['obraSocial']->value["nombre_obra_social"];?>
 </option>
     <?php
 }
