@@ -4,8 +4,20 @@
     grid-template-columns: repeat(7, 1fr);
 }
 
+.dia-semana {
+    background-color: gray;
+}
+
 .containerCalendario {
     text-align: center;
     width: 30%;
+}
+
+.hayTurno {
+    background-color: rgb(93, 219, 93);
+}
+
+.noHayturno {
+    background-color: rgb(255, 103, 103);
 }
 
