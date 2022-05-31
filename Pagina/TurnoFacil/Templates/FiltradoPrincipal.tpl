@@ -8,7 +8,7 @@
     <select class="form-select" aria-label="Default select example">
     <option selected>Selecccionar Especialidad</option>
     {foreach from=$especialidades item=$especialidad}
-    <option value="{$especialidad->nro_matricula}">{$especialidad->especialidad}</option>
+    <option value="{$especialidad["especialidad"]}">{$especialidad["especialidad"]}</option>
     {/foreach}
     </select>
 
@@ -16,7 +16,7 @@
     <select class="form-select" aria-label="Default select example">
     <option selected>Seleccionar obra social</option>
     {foreach from=$obraSociales item=$obraSocial}
-    <option value="{$obraSocial->obraSocial}">{$obraSocial->obraSocial}</option>
+    <option value="{$obraSocial["nombre_obra_social"]}">{$obraSocial["nombre_obra_social"]}</option>
     {/foreach}
     </select>
     
