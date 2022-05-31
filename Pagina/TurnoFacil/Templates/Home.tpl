@@ -16,9 +16,12 @@
 </div>
 
 <div class="contBotones">
-  <a href="filtrar_medicos" class="btn btn-primary btn-lg botonesHome btn-izq">SACAR TURNOS</a>
-  <a href="ver_Turnos" class="btn btn-primary btn-lg botonesHome btn-der">VER TURNOS</a>
-</div>
+  <div class="boton1">
+    <a href="filtrar_medicos" class="btn btn-primary btn-lg botonesHome btn-izq">SACAR TURNOS</a>
+  </div>
+  <div class="boton2">
+    <a href="ver_Turnos" class="btn btn-primary btn-lg botonesHome btn-der">VER TURNOS</a>
+  </div>
 </div>
 </main>
 {include file="Footer.tpl"}
