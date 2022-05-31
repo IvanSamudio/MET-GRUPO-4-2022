@@ -1,7 +1,7 @@
 {include file="Header.tpl"}
 
 <main class="container">
-<h1 class="text-uppercase fw-light container" style="width: 60rem">{$title}</h1>
+<h2 class="tittle">{$title}</h2>
 
 <form class="container mb-3" style="width: 60rem" action="" method="POST">
 
