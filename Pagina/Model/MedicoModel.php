@@ -28,7 +28,8 @@ class MedicoModel{
     }
 
     function getAllObraSociales(){
-        $sentencia = $this->db->prepare("SELECT * FROM medico GROUP BY obra_social");
+        //SELECT * FROM medico GROUP BY obra_social
+        $sentencia = $this->db->prepare("SELECT * FROM medico M JOIN obrasocial O on O.id_obra_social = M.obra_social GROUP BY M.obra_social");
         $sentencia->execute();
         return $sentencia->fetchAll(PDO::FETCH_ASSOC);
     }
