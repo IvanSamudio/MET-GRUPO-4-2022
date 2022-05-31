@@ -21,14 +21,16 @@ class TurnoFacilController{
   }
 
   function getTurnosMedico($params) {
-    $nro_matricula = $params[0];  
+    $nro_matricula = $params[0];
+    var_dump($params);
+
+    //Intente pasar por params (/185337/5) el mes, pero me rompe el css del calendario
     /* Por ahora lo tacho pero es un buen inicio para mejorar el calendario
     $dateYear = date('Y'); $dateMonth = date('m'); $dateDay = date('d');
     echo $dateYear; echo "  "; echo $dateMonth; echo "  "; echo $dateDay; echo "  ";
     $daysInMonth = cal_days_in_month(CAL_GREGORIAN, $dateMonth, $dateDay);
     echo $daysInMonth; */
-    /* V2 */
-    
+    /* V2 */    
     $turnosMedico = $this->model->getTurnosMedico($nro_matricula);
     $diasDisponibles = array();
     foreach ($turnosMedico as $turno) {
