@@ -2,7 +2,8 @@
 
 <div class="container">
     <ul class="horarios">
-        <h1>Horarios disponibles del dia {$fecha}: </h1>
+        <h1 class="tittle">Dr. {$medico->medico_nombre} {$medico->medico_apellido}</h1>
+        <h3>Horarios disponibles del dia {$fecha}: </h3>
         <h3>Hora inicio ATENCION: {$horarioAtencion->inicio_horario_atencion}HS - Hora fin ATENCION: {$horarioAtencion->fin_horario_atencion}HS</h3>
         {foreach from=$horas item=$hora_arreglo}
             
