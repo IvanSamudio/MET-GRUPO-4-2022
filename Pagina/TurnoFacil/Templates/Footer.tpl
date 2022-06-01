@@ -1,6 +1,6 @@
   <!-- Footer -->
   <footer>
-  <div class="logoFooter"><img id="logo-shelby" src="../TurnoFacil/Images/logo-transparente.png" alt="logo" srcset="" width="200px" height="100px"></div>
+  <div class="logoFooter"><img id="logo-shelby" src="../TurnoFacil/Images/logo2.png" alt="logo" srcset="" width="200px" height="100px"></div>
   <div class="datosFooter">
         <ul class="">
             <li>

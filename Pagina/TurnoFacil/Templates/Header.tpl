@@ -16,7 +16,7 @@
 
 <header>
     <div class="logo">
-        <img src="../TurnoFacil/Images/logo-transparente.png" alt="logo" srcset="" width="200px" height="100px">
+        <img src="../TurnoFacil/Images/logo2.png" alt="logo" srcset="" width="200px" height="100px">
     </div>
     
     <div class="menu">
