@@ -23,6 +23,66 @@ class TurnoFacilModel
     return $turnos;
   }
 
+  function getTurnosMedicoDia($nro_matricula, $dia, $mes) {
+    //Traigo los turnos de loss medicos, e incluyo algunos datos extras como el inicio y fin
+    //de atencion del medico de los medicos para poder armar el calendario con esos datos
+    $sentencia = 
+      $this->db->prepare(
+        "SELECT id_paciente, horario_turno, duracion_turno 
+         FROM turno 
+         WHERE (nro_matricula = ? 
+         AND horario_turno >= CURRENT_TIMESTAMP
+         AND (EXTRACT(DAY FROM horario_turno) = ?)
+         AND (EXTRACT(MONTH FROM horario_turno) = ?))");
+    $sentencia->execute(array($nro_matricula, $dia, $mes));
+    $turnos = $sentencia->fetchAll(PDO::FETCH_OBJ); 
+    return $turnos;
+
+  }
+
+  function getTurnosMedicoDiaFiltrado($nro_matricula, $dia, $mes, $horaFiltrar, $minutosFiltrar){
+    $sentencia = 
+      $this->db->prepare(
+        "SELECT id_paciente, horario_turno, duracion_turno 
+         FROM turno 
+         WHERE (nro_matricula = ? 
+         AND horario_turno >= CURRENT_TIMESTAMP
+         AND (EXTRACT(DAY FROM horario_turno) = ?)
+         AND (EXTRACT(MONTH FROM horario_turno) = ?)
+         AND (EXTRACT(HOUR FROM horario_turno) >= ?)
+         AND (EXTRACT(MINUTE FROM horario_turno) >= ?))");
+    $sentencia->execute(array($nro_matricula, $dia, $mes, $horaFiltrar, $minutosFiltrar));
+    $turnos = $sentencia->fetchAll(PDO::FETCH_OBJ); 
+    return $turnos;
+  }
+
+  function getTurnosMedicoDiaFiltradoHoraDia($nro_matricula, $dia, $mes, $horaDia, $max){
+    $sentencia = 
+      $this->db->prepare(
+        "SELECT id_paciente, horario_turno, duracion_turno 
+         FROM turno 
+         WHERE (nro_matricula = ? 
+         AND horario_turno >= CURRENT_TIMESTAMP
+         AND (EXTRACT(DAY FROM horario_turno) = ?)
+         AND (EXTRACT(MONTH FROM horario_turno) = ?)
+         AND (EXTRACT(HOUR FROM horario_turno) BETWEEN ? AND ?))");
+    $sentencia->execute(array($nro_matricula, $dia, $mes, $horaDia, $max));
+    $turnos = $sentencia->fetchAll(PDO::FETCH_OBJ); 
+    return $turnos;
+  }
+
+  function getHorariosMedico($nro_matricula){
+    //SELECT inicio_horario_atencion, fin_horario_atencion FROM medico WHERE nro_matricula = 185337;
+    $sentencia = 
+      $this->db->prepare(
+        "SELECT inicio_horario_atencion, fin_horario_atencion 
+         FROM medico 
+         WHERE nro_matricula = ?");
+    $sentencia->execute([$nro_matricula]);
+    $horarios = $sentencia->fetch(PDO::FETCH_OBJ); 
+    return $horarios;
+  }
+
   /* EJEMPLOS DE GET,UPDATE,DELETE,INSERT
   
   function GetTurnos(){
