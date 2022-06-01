@@ -54,8 +54,6 @@ class MedicoController{
         if ($_SERVER['REQUEST_METHOD'] === 'POST'){
             $especialidad = $_POST['especialidad'];
             $obraSocial = $_POST['obra_social'];
-            //echo($especialidad);
-            //echo($obraSocial);
             if(isset($especialidad) && ($especialidad != "all") && ($obraSocial != "all") && isset($obraSocial)){
                 $tabla = $this->model->GetMedicosPorEspecialidadYObra($especialidad, $obraSocial);
                 $this->FiltradoView->medicosFiltrados($tabla);

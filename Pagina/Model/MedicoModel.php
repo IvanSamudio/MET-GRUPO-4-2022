@@ -47,8 +47,6 @@ class MedicoModel{
     }
 
     function GetMedicosPorEspecialidadYObra($especialidad, $obraSocial){
-        echo($especialidad);
-        echo($obraSocial);
         $sentencia = $this->db->prepare("SELECT * FROM medico M JOIN obrasocial O on O.id_obra_social = M.obra_social WHERE M.especialidad = ? AND O.nombre_obra_social = ? ");
         $sentencia->execute([$especialidad, $obraSocial]);
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
