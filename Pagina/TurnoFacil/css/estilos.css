@@ -202,6 +202,10 @@ label.form-label {
     padding-top: 3%;
 }
 
+.flex-turno{
+    display: flex;
+}
+
 @media screen and (max-width: 1655px) {
     .datosFooter ul{
         font-size:medium;

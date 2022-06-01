@@ -71,9 +71,9 @@ class TurnoFacilController{
     $cantDiasMes = date('t', strtotime($fechaArmada));
     $anio = date('Y', strtotime($fechaArmada));
     array_push($datosMes, $diaInicioMes, $cantDiasMes, $anio);
-    
+    $medico = $this->model->getMedico($nro_matricula);
     $this->view->mostrarCalendarioTurnosDisponibles($nro_matricula, $diasDisponibles, $mesesDelAnio, 
-      $mesFecha, $datosMes);
+    $mesFecha, $datosMes, $medico);
   }
 
   function getHorariosTurnoMedico($params){
@@ -116,22 +116,106 @@ class TurnoFacilController{
         array_push($horasDisponibles, $horario);
       }
     }
-    echo "<br>";
     
       $horariosTurnos->inicio_horario_atencion = date('H:i', strtotime($horariosTurnos->inicio_horario_atencion));
       $horariosTurnos->fin_horario_atencion = date('H:i', strtotime($horariosTurnos->fin_horario_atencion));
 
       $hora_inicioTurno = date('G', strtotime($horariosTurnos->inicio_horario_atencion));
       $hora_finTurno = date('G', strtotime($horariosTurnos->fin_horario_atencion));
-      $this->view->mostrarHorariosTurnosDisponibles($horasDisponibles, $horariosTurnos, $hora_inicioTurno, $hora_finTurno, $nro_matricula, $fechaTurno);
+      $medico = $this->model->getMedico($nro_matricula);
+      $this->view->mostrarHorariosTurnosDisponibles($horasDisponibles, $horariosTurnos, $hora_inicioTurno, $hora_finTurno, $nro_matricula, $fechaTurno,$medico);
 
 
 
   }
 
-  
+  private function enviarEmail($nombre, $mail, $asunto, $mensaje){
 
+    setlocale(LC_TIME, "spanish");
+    $from = "turnoFacilOk@gmail.com";
+    $to = $mail;
+    $title = $asunto;
+    
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+    $headers .= 'From: Turno Facil '.$from.''. "\r\n";
+
+    // $this->load->library('email');
+    $config = array(
+          'mailtype'  => 'html',
+          'charset' => 'utf-8',
+          'protocol' => 'smtp',
+          'smtp_host' => 'ssl://@gmail.com',
+          'smtp_user' => 'turnoFacilOk@gmail.com',
+          'smtp_pass' => 'turno123facil',
+          'smtp_port' => '465',
+          'newline' => "\r\n",
+
+    );
+    // $this->email->initialize($config);
+
+    $result = mail($to,$title,$mensaje,$header);
+    // $this->email->to($to);
+
+    // $this->email->from($from, 'Turno Facil');
+
+    // $this->email->subject($title);
+    // $this->email->message($mensaje);
+    // $result = $this->email->send();
+    //var_dump($this->email->print_debugger());
+
+    if($result)
+        return true;
+    else
+        return false;
+}
+
+private function getBodyContent($title, $body,$header=NULL, $footer=NULL){
+
+    $message =  '<html>
+    <head>
+      <title>' . $title . '</title>
+    </head>
+    <body style="background-color:#010440">
+      <table width="100%" cellspacing="0" cellpadding="0" align="center">
+      <tbody><tr >
+      <td align="center" valign="top" >
+        <table cellpadding="0" cellspacing="0" style="width:690; border:0 ; background-color:#FFFFFF; margin:auto" width="690">
+          <tr><td>
+          <img style="margin: auto; width: 90px;" src="'. $header .'">
+          </td></tr>
+          <tr><td><div style="text-align: right; margin: 10px; font-size:14px; font-family:arial">
+              <p style="font-size: 12px">' . strftime("%d")  . ' de ' . strftime("%B") . ' de ' . strftime("%Y") . '</p>
+          </div></td></tr>
+          <tr><td style="font-size: 18px;padding:20px; font-family:arial">
+            ' . $body. '
+          </td></tr>
+          <tr><td>
+          //  <img style="margin: auto; width: 90px;" src="'. $footer .'">
+
+          </td></tr>
+          </table></td></tr>
+        </table>
+    </body>
+    </html>';
   
+    return  $message;
+
+}
+
+  function notificar_turno(){
+    $title= 'Confirmacion de turno';
+    $message = 'Tiene un nuevo turno';
+    $mail = 'lblanco@alumnos.exa.unicen.edu.ar'; 
+    
+    '<h3>'.$title.'</h3>;
+    <p>'.$texto.'</p>';
+
+    
+    $header = base_url().'TurnoFacil/images/logo-transparente.png'; 
+    $message = getBodyContent($title, $message, $header);
+    return enviarEmail($mail,$mail,$title,$message); 
+  }
 }
 
 ?>

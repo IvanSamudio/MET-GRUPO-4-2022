@@ -10,6 +10,7 @@ class ConfigApp
         'filtrar_medicos'=> 'MedicoController#mostrarTodasEspecialidadesyObra',
         'medicosConObra' => 'MedicoController#filtroMedico',
         'filtroTurnos'=> 'TurnoFacilController#getHorariosTurnoMedico',
+        'notificar'=> 'TurnoFacilController#notificar_turno',
 
     ];
 

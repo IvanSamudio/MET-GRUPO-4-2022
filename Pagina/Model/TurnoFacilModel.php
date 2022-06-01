@@ -23,6 +23,15 @@ class TurnoFacilModel
     return $turnos;
   }
 
+  function getMedico($nro_matricula) {
+    //Traigo los turnos de los medicos a partir de la fecha
+    $sentencia = $this->db->prepare("SELECT * FROM medico WHERE nro_matricula = ?");
+    $sentencia->execute([$nro_matricula]);
+    return $sentencia->fetch(PDO::FETCH_OBJ);
+  }
+
+
+
   function getTurnosMedicoDia($nro_matricula, $dia, $mes) {
     //Traigo los turnos de loss medicos, e incluyo algunos datos extras como el inicio y fin
     //de atencion del medico de los medicos para poder armar el calendario con esos datos

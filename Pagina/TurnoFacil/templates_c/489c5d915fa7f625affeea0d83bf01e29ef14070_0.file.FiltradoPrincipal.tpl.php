@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-05-31 00:40:41
+/* Smarty version 4.1.0, created on 2022-06-01 21:38:10
   from 'C:\xampp\htdocs\MET-GRUPO-4-2022\Pagina\TurnoFacil\Templates\FiltradoPrincipal.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_629547e98744b3_14203223',
+  'unifunc' => 'content_6297c02217c9f9_27130004',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '489c5d915fa7f625affeea0d83bf01e29ef14070' => 
     array (
       0 => 'C:\\xampp\\htdocs\\MET-GRUPO-4-2022\\Pagina\\TurnoFacil\\Templates\\FiltradoPrincipal.tpl',
-      1 => 1653950401,
+      1 => 1654111246,
       2 => 'file',
     ),
   ),
@@ -22,27 +22,27 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:Footer.tpl' => 1,
   ),
 ),false)) {
-function content_629547e98744b3_14203223 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6297c02217c9f9_27130004 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:Header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
-<main class="container">
-<h1 class="text-uppercase fw-light container" style="width: 60rem"><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
-</h1>
+<main class="containerFil">
 
-<form class="container mb-3" style="width: 60rem" action="" method="POST">
+<h3 class="tittle"><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
+</h3>
 
+<form class="container mb-3" style="width: 60vh" action="medicosConObra" method="POST">
     <label class="form-label">Filtrar por Especialidad</label>
-    <select class="form-select" aria-label="Default select example">
-    <option selected>Selecccionar Especialidad</option>
+    <select name="especialidad" class="form-select" aria-label="Default select example">
+    <option value="all" selected>Seleccionar Especialidad</option>
     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['especialidades']->value, 'especialidad');
 $_smarty_tpl->tpl_vars['especialidad']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['especialidad']->value) {
 $_smarty_tpl->tpl_vars['especialidad']->do_else = false;
 ?>
-    <option value="<?php echo $_smarty_tpl->tpl_vars['especialidad']->value->especialidad;?>
-"><?php echo $_smarty_tpl->tpl_vars['especialidad']->value->especialidad;?>
+    <option value="<?php echo $_smarty_tpl->tpl_vars['especialidad']->value["especialidad"];?>
+"><?php echo $_smarty_tpl->tpl_vars['especialidad']->value["especialidad"];?>
 </option>
     <?php
 }
@@ -50,24 +50,25 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </select>
 
     <label class="form-label">Filtrar por Obra Social</label>
-    <select class="form-select" aria-label="Default select example">
-    <option selected>Seleccionar obra social</option>
+    <select name="obra_social" class="form-select" aria-label="Default select example">
+    <option value="all" selected>Seleccionar obra social</option>
     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['obraSociales']->value, 'obraSocial');
 $_smarty_tpl->tpl_vars['obraSocial']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['obraSocial']->value) {
 $_smarty_tpl->tpl_vars['obraSocial']->do_else = false;
 ?>
-    <option value="<?php echo $_smarty_tpl->tpl_vars['obraSocial']->value->obraSocial;?>
-"><?php echo $_smarty_tpl->tpl_vars['obraSocial']->value->obraSocial;?>
+    <option value="<?php echo $_smarty_tpl->tpl_vars['obraSocial']->value["nombre_obra_social"];?>
+"><?php echo $_smarty_tpl->tpl_vars['obraSocial']->value["nombre_obra_social"];?>
 </option>
     <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </select>
     
-    <button class="btn btn-warning m-2" type="submit">Ver Medicos</button> //muestra otro tpl con los medicos yla especialidad y obra social elegida 
+    <input class="btn btn-warning m-2" type="submit" value="Ver Medicos">
 </form>
+
 </main>
 
 
