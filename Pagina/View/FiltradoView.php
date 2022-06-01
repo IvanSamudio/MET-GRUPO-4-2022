@@ -24,6 +24,7 @@ class FiltradoView
     }
 
     public function medicosFiltrados($tabla){
+        $this->Smarty->assign('Titulo', 'Medicos Turnofacil');
         $this->Smarty->assign('medicos', $tabla);
         $this->Smarty->display('Templates/listadoDeMedicosFiltrado.tpl');
     }
