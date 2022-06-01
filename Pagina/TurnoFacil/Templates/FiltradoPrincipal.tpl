@@ -1,27 +1,29 @@
 {include file="Header.tpl"}
 
-<main class="container">
-<h2 class="tittle">{$title}</h2>
+<main class="containerFil">
 
-<form class="container mb-3" style="width: 60rem" action="filtro_medico" method="POST">
+<h3 class="tittle">{$title}</h3>
+
+<form class="container mb-3" style="width: 60vh" action="medicosConObra" method="POST">
     <label class="form-label">Filtrar por Especialidad</label>
-    <select id="especialidad" class="form-select" aria-label="Default select example">
-    <option  disabled selected>Seleccionar Especialidad</option>
+    <select name="especialidad" class="form-select" aria-label="Default select example">
+    <option value="all" selected>Seleccionar Especialidad</option>
     {foreach from=$especialidades item=$especialidad}
     <option value="{$especialidad["especialidad"]}">{$especialidad["especialidad"]}</option>
     {/foreach}
     </select>
 
     <label class="form-label">Filtrar por Obra Social</label>
-    <select id="obra_social" class="form-select" aria-label="Default select example">
-    <option disabled selected>Seleccionar obra social</option>
+    <select name="obra_social" class="form-select" aria-label="Default select example">
+    <option value="all" selected>Seleccionar obra social</option>
     {foreach from=$obraSociales item=$obraSocial}
     <option value="{$obraSocial["nombre_obra_social"]}">{$obraSocial["nombre_obra_social"]}</option>
     {/foreach}
     </select>
     
-    <button class="btn btn-warning m-2" type="submit">Ver Medicos</button> //muestra otro tpl con los medicos yla especialidad y obra social elegida 
+    <input class="btn btn-warning m-2" type="submit" value="Ver Medicos">
 </form>
+
 </main>
 
 

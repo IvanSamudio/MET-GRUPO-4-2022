@@ -10,21 +10,21 @@ class MedicoModel{
     }
 
     function GetMedicos(){
-        $sentencia = $this->db->prepare("SELECT * FROM medico");
+        $sentencia = $this->db->prepare("SELECT * FROM medico M JOIN obrasocial O on O.id_obra_social = M.obra_social");
         $sentencia->execute();
-        return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
       }
 
     function GetMedicosPorEspecialidad($especialidad){
-        $sentencia = $this->db->prepare("SELECT * FROM medico WHERE especialidad = ? ");
-        $sentencia->execute($especialidad);
-        return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+        $sentencia = $this->db->prepare("SELECT * FROM medico M JOIN obrasocial O on O.id_obra_social = M.obra_social WHERE M.especialidad = ?");
+        $sentencia->execute([$especialidad]);
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
 
     function GetMedicosPorObraSocial($obraSocial){
-        $sentencia = $this->db->prepare("SELECT * FROM medico WHERE obraSocial = ? ");
-        $sentencia->execute($obraSocial);
-        return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+        $sentencia = $this->db->prepare("SELECT * FROM medico M JOIN obrasocial O on O.id_obra_social = M.obra_social WHERE O.nombre_obra_social = ?");
+        $sentencia->execute([$obraSocial]);
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
 
     function getAllObraSociales(){
@@ -41,9 +41,11 @@ class MedicoModel{
     }
 
     function GetMedicosPorEspecialidadYObra($especialidad, $obraSocial){
-        $sentencia = $this->db->prepare("SELECT * FROM medico WHERE especialidad = ? AND obraSocial = ? ");
-        $sentencia->execute($especialidad, $obraSocial);
-        return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+        echo($especialidad);
+        echo($obraSocial);
+        $sentencia = $this->db->prepare("SELECT * FROM medico M JOIN obrasocial O on O.id_obra_social = M.obra_social WHERE M.especialidad = ? AND O.nombre_obra_social = ? ");
+        $sentencia->execute([$especialidad, $obraSocial]);
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
 
     function UpdateMedico($especialidad, $horario, $contrasenia, $secretaria, $obraSocial, $nroMatricula){

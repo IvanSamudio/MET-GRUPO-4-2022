@@ -7,7 +7,7 @@ class ConfigApp
     public static $ACTIONS = [
         ''=> 'TurnoFacilController#Home',
         'filtrar_medicos'=> 'MedicoController#mostrarTodasEspecialidadesyObra',
-        'filtro_medicos' => 'MedicoController#filtroMedico',
+        'medicosConObra' => 'MedicoController#filtroMedico',
     ];
 
 }
