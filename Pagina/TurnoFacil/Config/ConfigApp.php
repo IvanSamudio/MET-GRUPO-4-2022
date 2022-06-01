@@ -6,8 +6,11 @@ class ConfigApp
     public static $PARAMS = 'params';
     public static $ACTIONS = [
         ''=> 'TurnoFacilController#Home',
+        'MostrarTurnos' => 'TurnoFacilController#getTurnosMedico',
         'filtrar_medicos'=> 'MedicoController#mostrarTodasEspecialidadesyObra',
         'medicosConObra' => 'MedicoController#filtroMedico',
+        'filtroTurnos'=> 'TurnoFacilController#getHorariosTurnoMedico',
+
     ];
 
 }

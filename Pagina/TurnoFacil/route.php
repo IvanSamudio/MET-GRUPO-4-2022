@@ -3,6 +3,8 @@
 define('ACTION', 0);
 define('PARAMS', 1);
 
+define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
+
 require_once "config/ConfigApp.php";
 require_once "../Controller/TurnoFacilController.php";
 require_once "../Controller/MedicoController.php";
