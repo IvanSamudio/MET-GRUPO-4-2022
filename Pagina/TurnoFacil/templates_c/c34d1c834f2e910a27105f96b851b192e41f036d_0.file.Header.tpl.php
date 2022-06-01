@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-05-31 06:37:26
+/* Smarty version 4.1.0, created on 2022-06-01 00:17:56
   from 'C:\xampp\htdocs\FACULTAD\TPE-MET_FUNCANDO\Pagina\TurnoFacil\templates\Header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_62959b86ca6af6_46030898',
+  'unifunc' => 'content_62969414b66896_57933287',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c34d1c834f2e910a27105f96b851b192e41f036d' => 
     array (
       0 => 'C:\\xampp\\htdocs\\FACULTAD\\TPE-MET_FUNCANDO\\Pagina\\TurnoFacil\\templates\\Header.tpl',
-      1 => 1653971187,
+      1 => 1654035473,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_62959b86ca6af6_46030898 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62969414b66896_57933287 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="es">
 <head>
@@ -36,6 +36,8 @@ function content_62959b86ca6af6_46030898 (Smarty_Internal_Template $_smarty_tpl)
 css/estilos.css">
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['basehref']->value;?>
 css/calendario.css">
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['basehref']->value;?>
+css/horarios.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 </head>
 <body>

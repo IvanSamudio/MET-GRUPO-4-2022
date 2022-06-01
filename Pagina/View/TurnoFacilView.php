@@ -22,9 +22,14 @@ class TurnoFacilView
     $this->Smarty->display('templates/CalendarioTurnos.tpl');
   }
 
-  function mostrarHorariosTurnosDisponibles($horasDisponibles) {
+  function mostrarHorariosTurnosDisponibles($horasDisponibles, $horariosTurnos, $hora_inicioTurno, $fin_HTurno, $matricula_med, $fechaTurno) {
     $this->Smarty->assign('horas', $horasDisponibles);
-    $this->Smarty->display('templates/HorariosTurnos.tpl');
+    $this->Smarty->assign('horarioAtencion', $horariosTurnos);
+    $this->Smarty->assign('inicio_horarioAtencion', $hora_inicioTurno);
+    $this->Smarty->assign('fin_horarioAtencion', $fin_HTurno);
+    $this->Smarty->assign('matricula_med', $matricula_med);
+    $this->Smarty->assign('fecha', $fechaTurno);
+    $this->Smarty->display('templates/HorariosTurnos.tpl'); 
   }
   
 }

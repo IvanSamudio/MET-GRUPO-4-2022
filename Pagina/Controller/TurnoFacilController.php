@@ -43,35 +43,51 @@ class TurnoFacilController{
     $this->view->mostrarCalendarioTurnosDisponibles($diasDisponibles);
   }
 
-  function getHorariosTurnoMedico($params){
-    //deberia ser llamado con los datos despues de elegir la fecha del turno, pero mientras para probar repito code
-    $fecha_turno = $params[0];
-    var_dump($fecha_turno);
+  function getHorariosTurnoMedico($nro_matricula = null, $diaElegido = null, $mesElegido = null){
+    /* $nro_matricula = 185337;
+    $diaElegido = 31;
+    $mesElegido = 05; */  //es para que ande a mano, tambien activar la url en ConfigApp, Lauta me llama pasando los datos desde su func
 
-    echo "<br>";
+    $fechaTurno = "$diaElegido/$mesElegido";
 
-    echo "Mostrando horarios de turnos disponibles para el dia: {$fecha_turno}";
+    if (isset($_POST["hora-Filtro"]) && isset($_POST["minutos-Filtro"]))
+    {
+      $horaFiltrar = $_POST["hora-Filtro"];
+      $minutosFiltrar = $_POST["minutos-Filtro"];
+      $turnosMedico = $this->model->getTurnosMedicoDiaFiltrado($nro_matricula, $diaElegido, $mesElegido, $horaFiltrar, $minutosFiltrar);
+    }
+    else if (isset($_POST["maniana-tarde"]))
+    {
+      $horaDia = $_POST["maniana-tarde"];
+      $maxHora = $horaDia + 6;
+      $turnosMedico = $this->model->getTurnosMedicoDiaFiltradoHoraDia($nro_matricula, $diaElegido, $mesElegido, $horaDia, $maxHora);
+    }
+    else
+      $turnosMedico = $this->model->getTurnosMedicoDia($nro_matricula, $diaElegido, $mesElegido);
 
-    $turnosMedico = $this->model->getTurnosMedico(185337);
+    $horariosTurnos = $this->model->getHorariosMedico($nro_matricula);
     $horasDisponibles = array();
-    echo "<br>";
+    
     foreach ($turnosMedico as $turno) {
       if (is_null($turno->id_paciente)) {
         $horario = array();
         $hora_inicio = strtotime($turno->horario_turno); //hora inicio
         $duracion_turno = strtotime($turno->duracion_turno); //hora inicio
-        $horario[0] = date('H:i', $hora_inicio);
-        $horario[1] = date('H:i', $duracion_turno); //duracion del turno
+        $horario[0] = date('H:i', $hora_inicio); //16:30
+        $horario[1] = date('H:i', $duracion_turno); //duracion del turno 00:30
         $horario[2] = date('H:i', ($hora_inicio - $duracion_turno));
-        echo $horario[2];
   
         array_push($horasDisponibles, $horario);
       }
     }
     echo "<br>";
+    
+      $horariosTurnos->inicio_horario_atencion = date('H:i', strtotime($horariosTurnos->inicio_horario_atencion));
+      $horariosTurnos->fin_horario_atencion = date('H:i', strtotime($horariosTurnos->fin_horario_atencion));
 
-    var_dump($horasDisponibles);
-    $this->view->mostrarHorariosTurnosDisponibles($horasDisponibles);
+      $hora_inicioTurno = date('G', strtotime($horariosTurnos->inicio_horario_atencion));
+      $hora_finTurno = date('G', strtotime($horariosTurnos->fin_horario_atencion));
+      $this->view->mostrarHorariosTurnosDisponibles($horasDisponibles, $horariosTurnos, $hora_inicioTurno, $hora_finTurno, $nro_matricula, $fechaTurno);
 
 
 
