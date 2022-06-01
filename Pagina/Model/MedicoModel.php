@@ -6,13 +6,13 @@ class MedicoModel{
     
     function __construct()
     {
-      $this->db = new PDO('mysql:host=localhost;' . 'dbname=;charset=utf8', 'root', '');
+      $this->db = new PDO('mysql:host=localhost;' . 'dbname=turnofacil;charset=utf8', 'root', '');
     }
 
     function GetMedicos(){
-        $sentencia = $this->db->prepare("SELECT * FROM medico");
+        $sentencia = $this->db->prepare("SELECT * FROM medico M JOIN obrasocial O on O.id_obra_social = M.obra_social");
         $sentencia->execute();
-        return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
       }
 
     function getMedicoPorMatricula($nro_matricula){
@@ -22,19 +22,20 @@ class MedicoModel{
     }
 
     function GetMedicosPorEspecialidad($especialidad){
-        $sentencia = $this->db->prepare("SELECT * FROM medico WHERE especialidad = ? ");
-        $sentencia->execute($especialidad);
-        return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+        $sentencia = $this->db->prepare("SELECT * FROM medico M JOIN obrasocial O on O.id_obra_social = M.obra_social WHERE M.especialidad = ?");
+        $sentencia->execute([$especialidad]);
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
 
     function GetMedicosPorObraSocial($obraSocial){
-        $sentencia = $this->db->prepare("SELECT * FROM medico WHERE obraSocial = ? ");
-        $sentencia->execute($obraSocial);
-        return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+        $sentencia = $this->db->prepare("SELECT * FROM medico M JOIN obrasocial O on O.id_obra_social = M.obra_social WHERE O.nombre_obra_social = ?");
+        $sentencia->execute([$obraSocial]);
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
 
     function getAllObraSociales(){
-        $sentencia = $this->db->prepare("SELECT * FROM medico GROUP BY obra_social");
+        //SELECT * FROM medico GROUP BY obra_social
+        $sentencia = $this->db->prepare("SELECT * FROM medico M JOIN obrasocial O on O.id_obra_social = M.obra_social GROUP BY M.obra_social");
         $sentencia->execute();
         return $sentencia->fetchAll(PDO::FETCH_ASSOC);
     }
@@ -46,9 +47,11 @@ class MedicoModel{
     }
 
     function GetMedicosPorEspecialidadYObra($especialidad, $obraSocial){
-        $sentencia = $this->db->prepare("SELECT * FROM medico WHERE especialidad = ? AND obraSocial = ? ");
-        $sentencia->execute($especialidad, $obraSocial);
-        return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+        echo($especialidad);
+        echo($obraSocial);
+        $sentencia = $this->db->prepare("SELECT * FROM medico M JOIN obrasocial O on O.id_obra_social = M.obra_social WHERE M.especialidad = ? AND O.nombre_obra_social = ? ");
+        $sentencia->execute([$especialidad, $obraSocial]);
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
 
     function UpdateMedico($especialidad, $horario, $contrasenia, $secretaria, $obraSocial, $nroMatricula){
@@ -66,6 +69,4 @@ class MedicoModel{
         $sentencia = $this->db->prepare("INSERT INTO medico VALUES(?,?,?,?,NULL,?)");
         $sentencia->execute([$nroMatricula,$especialidad,$horario,$contrasenia,$obraSocial]);
     }
-
-
 }

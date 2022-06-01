@@ -15,9 +15,9 @@ class TurnoFacilController{
     $this->model = new TurnoFacilModel();
   }
 
-  function Home(){
+  function home(){
     //$Turnos = $this->model->GetTurnos();
-    $this->view->Mostrar($this->Titulo);
+    $this->view->mostrar($this->Titulo);
   }
 
   function getTurnosMedico($params) {

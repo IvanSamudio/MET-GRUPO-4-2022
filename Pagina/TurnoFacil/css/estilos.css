@@ -1,21 +1,48 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
 .container{
-    min-width: 92%;
+    min-width: 80vh;
+}
+
+.containerFil{
+    height: 62vh;
 }
 
 .carousel-item{
-    height: 600px !important;
-    
+    height: 80vh !important;  
 }
 
 .carousel-item img{
-    min-height: 100% !important; 
-    max-height: 100% !important;
+    min-height: 80vh !important; 
+    max-height: 80vh !important;
 }
 
 .contBotones{
-    min-height: 200px !important;
+    min-height: 40vh!important;
     width: 100%;
     background-color: rgb(245, 238, 238) !important;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.boton1 {
+    width: 50%;
+}
+
+.boton2 {
+    width: 50%;
+    margin-left: -25%;
+}
+
+.boton1 a, .boton2 a{
+    margin-top: -1%;
+    width: 70%;
+    font-size: 1.2rem;
 }
 
 .botonesHome{
@@ -36,21 +63,23 @@
     margin-right: 7%;
 }
 
-.footer{
+footer{
     background-color: #69bfb7 !important;
     text-decoration: none !important;
     display: inline-block;
     min-width: 100%;
-    border-top: 2px solid #559992;
+    height: 25vh;
+    font-size: 1rem;
 }
 
 .logoFooter{
-    margin-left: 5%;
-    padding-top: 2%;
+    margin-left: 15%;
+    padding-top: 3.5%;
     width: auto;
     float:left;
-    padding-right: 2%;
-    border-right: 5px solid white;
+    padding-right: 3%;
+    border-right: 3px solid white;
+    height: 25vh;
 }
 
 .datosFooter{
@@ -72,13 +101,105 @@
 .footerText{
     text-align: right;
     padding-left: 30%;
-    padding-right: 8%;
+    padding-right: 6%;
     padding-top: 2%;
     color: white;
+    font-size: 1rem;
 }
 
 .container{
     min-height: 360px !important;
+}
+
+header{
+    height: 20vh;
+    background: #69BFB7;
+    padding: 15px;
+}
+
+.logo{
+    margin-left: 8%;
+    padding-top: 1%;
+    width: auto;
+    height: 12vh;
+    float: left;
+    padding-right: 2%;
+}
+
+img {
+    height: 10vh;
+    width: auto;
+}
+
+.icono {
+    float: right;
+    width: 35px;
+    padding-top: 1.5%;
+    margin-right: 1.5%;
+}
+
+.iconoMenu {
+    float: right;
+    width: 35px;
+    padding-top: 1.6%;
+    margin-right: 3%;
+}
+
+.icono, svg {
+    color: #F2F2F2 !important;
+}
+
+li{
+    margin: 8% 0px 6% 0px;
+    width: 100%; 
+}
+
+i.bi.bi-facebook {
+    margin-right: 5px;
+}
+
+h3.tittle{
+    color: rgb(73, 70, 70);
+    padding-top: 2.5%;
+    text-align: center;
+}
+
+form.container.mb-3 {
+    width: 30vw !important;
+    margin-bottom: 0px !important;
+}
+
+label.form-label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 1%;
+    margin-top: 5%;
+    color: rgb(73, 70, 70);
+}
+
+.m-2 {
+    background-color: #69bfb7 !important;
+    margin-left: 30%!important;
+    margin-top: 6% !important;
+    padding: 10%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: #559992;
+    color: #F2F2F2;
+}
+
+.btn:hover {
+    color: #F2F2F2;
+    border-color: #559992 !important;
+    display: flex;
+    justify-content: center;
+}
+
+.tabla{
+    width: 80vw;
+    margin-left: 11%;
+    min-height: 60vh!important;
+    padding-top: 3%;
 }
 
 @media screen and (max-width: 1655px) {
@@ -90,8 +211,6 @@
         max-width: 30%;
     }
     
-
-
     .logoFooter img{
         width: auto;
         max-width: 100%;
