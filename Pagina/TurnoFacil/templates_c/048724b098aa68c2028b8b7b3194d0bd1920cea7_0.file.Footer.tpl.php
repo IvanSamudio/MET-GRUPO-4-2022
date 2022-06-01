@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-05-30 19:01:55
-  from 'C:\xampp\htdocs\proyectos\Proyecto\MET-GRUPO-4-2022\Pagina\TurnoFacil\templates\Footer.tpl' */
+/* Smarty version 4.1.0, created on 2022-05-31 19:07:50
+  from 'F:\xampp\htdocs\testFolder\Pagina\TurnoFacil\templates\Footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6294f8838afb54_41679232',
+  'unifunc' => 'content_62964b66158537_56631625',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'c05443987b829ac4507e99d11bdab6d957727117' => 
+    '048724b098aa68c2028b8b7b3194d0bd1920cea7' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\proyectos\\Proyecto\\MET-GRUPO-4-2022\\Pagina\\TurnoFacil\\templates\\Footer.tpl',
-      1 => 1653929777,
+      0 => 'F:\\xampp\\htdocs\\testFolder\\Pagina\\TurnoFacil\\templates\\Footer.tpl',
+      1 => 1654016859,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6294f8838afb54_41679232 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62964b66158537_56631625 (Smarty_Internal_Template $_smarty_tpl) {
 ?>  <!-- Footer -->
   <footer class="footer">
   <div class="logoFooter"><img id="logo-shelby" src="../TurnoFacil/Images/logo-transparente.png" alt="logo" srcset="" width="200px" height="100px"></div>

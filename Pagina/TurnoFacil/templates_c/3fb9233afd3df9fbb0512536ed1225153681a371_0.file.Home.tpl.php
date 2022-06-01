@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-05-30 22:58:32
-  from 'C:\xampp\htdocs\proyectos\Proyecto\MET-GRUPO-4-2022\Pagina\TurnoFacil\templates\Home.tpl' */
+/* Smarty version 4.1.0, created on 2022-05-31 06:37:26
+  from 'C:\xampp\htdocs\FACULTAD\TPE-MET_FUNCANDO\Pagina\TurnoFacil\templates\Home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_62952ff81a2c77_94236809',
+  'unifunc' => 'content_62959b86c06196_83538827',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '7eec345b4ce7a54f84b87ba349e4f772313389a8' => 
+    '3fb9233afd3df9fbb0512536ed1225153681a371' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\proyectos\\Proyecto\\MET-GRUPO-4-2022\\Pagina\\TurnoFacil\\templates\\Home.tpl',
-      1 => 1653944301,
+      0 => 'C:\\xampp\\htdocs\\FACULTAD\\TPE-MET_FUNCANDO\\Pagina\\TurnoFacil\\templates\\Home.tpl',
+      1 => 1653971187,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:Footer.tpl' => 1,
   ),
 ),false)) {
-function content_62952ff81a2c77_94236809 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62959b86c06196_83538827 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:Header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <main class="container">
@@ -43,7 +43,7 @@ $_smarty_tpl->_subTemplateRender("file:Header.tpl", $_smarty_tpl->cache_id, $_sm
 
 <div class="contBotones">
   <a href="filtrar_medicos" class="btn btn-primary btn-lg botonesHome btn-izq">SACAR TURNOS</a>
-  <a href="verTurnos" class="btn btn-primary btn-lg botonesHome btn-der">VER TURNOS</a>
+  <a href="ver_Turnos" class="btn btn-primary btn-lg botonesHome btn-der">VER TURNOS</a>
 </div>
 </div>
 </main>

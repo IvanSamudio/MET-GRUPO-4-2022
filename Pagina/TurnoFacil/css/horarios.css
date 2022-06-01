@@ -1,0 +1,14 @@
+.filtro{
+    display: flex;
+    margin-left: 2%;
+    border: 1px solid black;
+}
+
+#btn-filtro{
+    margin-left: 1%;
+}
+
+#separador{
+    margin-left: 1%;
+    margin-right: 1%;
+}
