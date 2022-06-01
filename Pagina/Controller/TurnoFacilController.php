@@ -43,7 +43,7 @@ class TurnoFacilController{
     $this->view->mostrarCalendarioTurnosDisponibles($diasDisponibles);
   }
 
-  function getHorariosTurnoMedico($nro_matricula = null, $diaElegido = null, $mesElegido = null){
+  function getHorariosTurnoMedico($nro_matricula, $diaElegido, $mesElegido){
     /* $nro_matricula = 185337;
     $diaElegido = 31;
     $mesElegido = 05; */  //es para que ande a mano, tambien activar la url en ConfigApp, Lauta me llama pasando los datos desde su func
