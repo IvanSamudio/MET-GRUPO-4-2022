@@ -11,6 +11,7 @@ class FiltradoView
     {
         $this->Smarty = new Smarty();
         $r = $this->Smarty->assign('root', "http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
+        $this->Smarty->assign('basehref', BASE_URL);
     }
 
     public function showFiltrado($obrasSociales, $especialidades)
