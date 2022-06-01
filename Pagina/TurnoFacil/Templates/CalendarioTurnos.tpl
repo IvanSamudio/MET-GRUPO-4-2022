@@ -1,9 +1,14 @@
 {include file="Header.tpl"}
-<div class="containerCalendario">
+<div class="container-calendario">
     {foreach from=$meses item=nombreMes key=nroMes}
         {if $mes eq $nroMes}
-        <div class="nombreMesCalendario">
+        <div class="nombre-mes-navegacion">
             <p>{$nombreMes}</p>
+            {if $mes == 12}
+                <a href="{$basehref}MostrarTurnos/{$nro_matricula}/{$mes-11}/{$anio+1}"> -> </a>
+            {else}
+                <a href="{$basehref}MostrarTurnos/{$nro_matricula}/{$mes+1}/{$anio}"> -> </a>
+            {/if}
         </div>
         {/if}
     {/foreach}
@@ -16,14 +21,14 @@
         <li class="dia-semana">Sab</li>
         <li class="dia-semana">Dom</li>
         {for $offsetDia=1 to $dia_inicio_mes-1}
-            <li class="diaVacio"> </li>
+            <li class="dia-vacio"> </li>
         {/for}
         {for $dia=1 to $cant_dias_mes}
             {if $dia|in_array:$turnos}
-                <li class="hayTurno"><a href="{$basehref}HorariosTurno/{$nro_matricula}/{$dia}/{$mes}">
+                <li class="hay-turno"><a href="{$basehref}filtroTurnos/{$nro_matricula}/{$dia}/{$mes}">
                 {$dia}</a></li>
             {else}
-                <li class="noHayTurno">{$dia}</li>
+                <li class="no-hay-turno">{$dia}</li>
             {/if}
         {/for}
     </ul>

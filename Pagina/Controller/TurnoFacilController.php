@@ -65,17 +65,21 @@ class TurnoFacilController{
                           6 => 'Junio', 7 => 'Julio', 8 => 'Agosto', 9 => 'Septiembre', 10 => 'Octubre',
                           11 => 'Noviembre', 12 => 'Diciembre');
 
-    //Datos mes: Que dia cae el 1 (valor del 1 al 7) y cuantos dias tiene el mes
+    //Datos mes: Que dia cae el 1 (valor del 1 al 7), cuantos dias tiene el mes, anio
     $datosMes = array();
     $diaInicioMes = date('N', strtotime(date('Y-m', strtotime($fechaArmada))));
     $cantDiasMes = date('t', strtotime($fechaArmada));
-    array_push($datosMes, $diaInicioMes, $cantDiasMes);
+    $anio = date('Y', strtotime($fechaArmada));
+    array_push($datosMes, $diaInicioMes, $cantDiasMes, $anio);
     
     $this->view->mostrarCalendarioTurnosDisponibles($nro_matricula, $diasDisponibles, $mesesDelAnio, 
       $mesFecha, $datosMes);
   }
 
-  function getHorariosTurnoMedico($nro_matricula, $diaElegido, $mesElegido){
+  function getHorariosTurnoMedico($params){
+    $nro_matricula = $params[0];
+    $diaElegido = $params[1];
+    $mesElegido = $params[2];
     /* $nro_matricula = 185337;
     $diaElegido = 31;
     $mesElegido = 05; */  //es para que ande a mano, tambien activar la url en ConfigApp, Lauta me llama pasando los datos desde su func

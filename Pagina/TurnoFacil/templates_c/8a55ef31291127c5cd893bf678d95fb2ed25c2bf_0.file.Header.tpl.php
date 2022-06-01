@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-05-31 19:07:50
+/* Smarty version 4.1.0, created on 2022-05-31 23:20:15
   from 'F:\xampp\htdocs\testFolder\Pagina\TurnoFacil\templates\Header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_62964b6613b732_94655281',
+  'unifunc' => 'content_6296ccdf8421d1_29119862',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8a55ef31291127c5cd893bf678d95fb2ed25c2bf' => 
     array (
       0 => 'F:\\xampp\\htdocs\\testFolder\\Pagina\\TurnoFacil\\templates\\Header.tpl',
-      1 => 1654016859,
+      1 => 1654049886,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_62964b6613b732_94655281 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6296ccdf8421d1_29119862 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="es">
 <head>
@@ -36,6 +36,8 @@ function content_62964b6613b732_94655281 (Smarty_Internal_Template $_smarty_tpl)
 css/estilos.css">
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['basehref']->value;?>
 css/calendario.css">
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['basehref']->value;?>
+css/horarios.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 </head>
 <body>

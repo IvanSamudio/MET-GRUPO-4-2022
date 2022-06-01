@@ -1,3 +1,9 @@
+.container-calendario {
+    margin: 0 auto;
+    text-align: center;
+    width: 30%;
+}
+
 .calendario {
     list-style: none;
     display: grid;
@@ -7,25 +13,30 @@
     border: 2px solid black;
 }
 
+.nombre-mes-navegacion {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.nombre-mes-navegacion p, a {
+    font-weight: bold;
+}
+
 .dia-semana {
     font-style: italic;
     background-color: rgb(138, 138, 138);
     border-bottom: 1px solid black;
 }
 
-.containerCalendario {
-    text-align: center;
-    width: 30%;
-}
-
-.hayTurno {
+.hay-turno {
     background-color: rgb(93, 219, 93);
 }
 
-.noHayTurno {
+.no-hay-turno {
     background-color: rgb(255, 103, 103);
 }
 
-.diaVacio {
+.dia-vacio {
     background-color: rgb(236, 236, 236);
 }

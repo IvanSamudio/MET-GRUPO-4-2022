@@ -23,6 +23,7 @@ class TurnoFacilView
     $this->Smarty->assign('nro_matricula', $nro_matricula);
     $this->Smarty->assign('dia_inicio_mes', $datosMes[0]);
     $this->Smarty->assign('cant_dias_mes', $datosMes[1]);
+    $this->Smarty->assign('anio', $datosMes[2]);
     $this->Smarty->assign('mes', $mesFecha);
     $this->Smarty->assign('meses', $mesesDelAnio);
     $this->Smarty->assign('turnos', $diasDisponibles);
