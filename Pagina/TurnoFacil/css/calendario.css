@@ -2,10 +2,15 @@
     list-style: none;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    margin-left: 32px;
+    padding-left: 0px;
+    border: 2px solid black;
 }
 
 .dia-semana {
-    background-color: gray;
+    font-style: italic;
+    background-color: rgb(138, 138, 138);
+    border-bottom: 1px solid black;
 }
 
 .containerCalendario {
@@ -17,7 +22,10 @@
     background-color: rgb(93, 219, 93);
 }
 
-.noHayturno {
+.noHayTurno {
     background-color: rgb(255, 103, 103);
 }
 
+.diaVacio {
+    background-color: rgb(236, 236, 236);
+}

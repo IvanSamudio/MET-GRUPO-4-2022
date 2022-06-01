@@ -9,21 +9,18 @@ class TurnoFacilModel
     , 'root', '');
   }
 
-  function getTurnosMedico($nro_matricula) {
-    //Traigo los turnos de loss medicos, e incluyo algunos datos extras como el inicio y fin
-    //de atencion del medico de los medicos para poder armar el calendario con esos datos
+  function getTurnosMedico($nro_matricula, $fecha, $fechaFinMes) {
+    //Traigo los turnos de los medicos a partir de la fecha
     $sentencia = 
       $this->db->prepare(
-        "SELECT id_paciente, horario_turno, duracion_turno, 
-          m.inicio_horario_atencion, m.fin_horario_atencion
-         FROM turno t
-         INNER JOIN medico m ON t.nro_matricula = m.nro_matricula
-         WHERE (t.nro_matricula = ? 
-         AND horario_turno >= CURRENT_TIMESTAMP)");
-    $sentencia->execute([$nro_matricula]);
+        "SELECT id_paciente, horario_turno
+         FROM turno
+         WHERE (nro_matricula = ? 
+         AND id_paciente IS NULL
+         AND horario_turno BETWEEN ? AND ?)");
+    $sentencia->execute([$nro_matricula, $fecha, $fechaFinMes]);
     $turnos = $sentencia->fetchAll(PDO::FETCH_OBJ); 
     return $turnos;
-
   }
 
   /* EJEMPLOS DE GET,UPDATE,DELETE,INSERT
