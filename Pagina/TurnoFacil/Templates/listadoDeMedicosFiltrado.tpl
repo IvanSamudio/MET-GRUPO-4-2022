@@ -16,7 +16,7 @@
                 <td>{$medico->medico_apellido}</td>
                 <td>{$medico->especialidad}</td>
                 <td>{$medico->nombre_obra_social}</td>
-                <td><button>sacar turno</button></td>
+                <td><button><a href="{$basehref}/MostrarTurnos/{$medico->nro_matricula}">Sacar Turno</a></button></td>
             </tr>
         {/foreach}
     </tbody>

@@ -20,6 +20,7 @@ class TurnoFacilView
   function mostrarCalendarioTurnosDisponibles($nro_matricula, $diasDisponibles, $mesesDelAnio, 
     $mesFecha, $datosMes) 
   {
+    $this->Smarty->assign('Titulo', "Calendario Turnos");
     $this->Smarty->assign('nro_matricula', $nro_matricula);
     $this->Smarty->assign('dia_inicio_mes', $datosMes[0]);
     $this->Smarty->assign('cant_dias_mes', $datosMes[1]);
@@ -31,6 +32,7 @@ class TurnoFacilView
   }
 
   function mostrarHorariosTurnosDisponibles($horasDisponibles, $horariosTurnos, $hora_inicioTurno, $fin_HTurno, $matricula_med, $fechaTurno) {
+    $this->Smarty->assign('Titulo', "Turnos del Día");
     $this->Smarty->assign('horas', $horasDisponibles);
     $this->Smarty->assign('horarioAtencion', $horariosTurnos);
     $this->Smarty->assign('inicio_horarioAtencion', $hora_inicioTurno);

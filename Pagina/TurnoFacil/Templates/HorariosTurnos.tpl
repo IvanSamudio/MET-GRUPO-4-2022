@@ -10,7 +10,7 @@
     </ul>
 
     <div class="contenedor-filtro">
-        <form class="filtro" action="filtroTurnos" method="POST">
+        <form class="filtro" action="filtroTurnos/{$matricula_med}/{$fecha}" method="POST">
         <label for="1">Selecione a partir de que horario desea encontrar turnos</label>
         <select name="hora-Filtro" id="1">
             {for $hora=$inicio_horarioAtencion to $fin_horarioAtencion}
@@ -28,7 +28,7 @@
     </div>
 
     <div class="contenedor-filtro">
-        <form class="filtro" action="filtroTurnos" method="POST">
+        <form class="filtro" action="filtroTurnos/{$matricula_med}/{$fecha}" method="POST">
         <label for="1">Selecione si desea buscar turnos de mañana (6AM-12AM) o tarde (12AM-6PM)</label>
 
         <select name="maniana-tarde">

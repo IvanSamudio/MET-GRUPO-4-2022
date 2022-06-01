@@ -11,6 +11,7 @@ class FiltradoView
     {
         $this->Smarty = new Smarty();
         $r = $this->Smarty->assign('root', "http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
+        $this->Smarty->assign('basehref', BASE_URL);
     }
 
     public function showFiltrado($obrasSociales, $especialidades)
@@ -23,6 +24,7 @@ class FiltradoView
     }
 
     public function medicosFiltrados($tabla){
+        $this->Smarty->assign('Titulo', 'Medicos Turnofacil');
         $this->Smarty->assign('medicos', $tabla);
         $this->Smarty->assign('titulo', 'Turno Facil');
         $this->Smarty->display('Templates/listadoDeMedicosFiltrado.tpl');
