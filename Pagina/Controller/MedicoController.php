@@ -50,7 +50,28 @@ class MedicoController{
             
     }
 
-  
+    function filtroMedico(){
+        if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+            $especialidad = $_POST['especialidad'];
+            $obraSocial = $_POST['obra_social'];
+            if(isset($especialidad) && ($especialidad != "all") && ($obraSocial != "all") && isset($obraSocial)){
+                $tabla = $this->model->GetMedicosPorEspecialidadYObra($especialidad, $obraSocial);
+                $this->FiltradoView->medicosFiltrados($tabla);
+            }
+            elseif(isset($especialidad) && ($especialidad != "all")){
+                $tabla = $this->model->GetMedicosPorEspecialidad($especialidad);
+                $this->FiltradoView->medicosFiltrados($tabla);
+            }
+            elseif(isset($obraSocial) && ($obraSocial != "all")){
+                $tabla = $this->model->GetMedicosPorObraSocial($obraSocial);
+                $this->FiltradoView->medicosFiltrados($tabla);
+            }
+            else{
+                $tabla = $this->model->GetMedicos();
+                $this->FiltradoView->medicosFiltrados($tabla);
+            }
+        }
+    }
     
 
 }

@@ -1,0 +1,42 @@
+.container-calendario {
+    margin: 0 auto;
+    text-align: center;
+    width: 30%;
+}
+
+.calendario {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-left: 32px;
+    padding-left: 0px;
+    border: 2px solid black;
+}
+
+.nombre-mes-navegacion {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.nombre-mes-navegacion p, a {
+    font-weight: bold;
+}
+
+.dia-semana {
+    font-style: italic;
+    background-color: rgb(138, 138, 138);
+    border-bottom: 1px solid black;
+}
+
+.hay-turno {
+    background-color: rgb(93, 219, 93);
+}
+
+.no-hay-turno {
+    background-color: rgb(255, 103, 103);
+}
+
+.dia-vacio {
+    background-color: rgb(236, 236, 236);
+}
