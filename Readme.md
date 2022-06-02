@@ -11,7 +11,11 @@
 
 1. La carpeta "Documentacion" contiene:
     - La carpeta "Criterio de DONE" contiene un documento de texto donde se plantea el Criterio de DONE.
+    - La carpeta "Presentaciones" contiene las slides de la presentacion del primer sprint.
+    - La carpeta "Retrospective" contiene un documento donde se hace una retrospective del warm up.
+    - La carpeta "Testeos" contiene un documento donde se visualizan las tareas testeadas.
     -  La carpeta "UserStoryMapping" contiene:
         - La imagen correspondiente al userStoryMapping realizado.
+    
           
 2. La carperta "Pagina" contiene todo el codigo fuente de la pagina web.
