@@ -206,6 +206,15 @@ label.form-label {
     display: flex;
 }
 
+.navAdmin{
+    flex-wrap:nowrap;
+}
+
+.navAdmin li{
+    margin: 20px 0 0 0 !important;
+    width: auto;
+}
+
 @media screen and (max-width: 1655px) {
     .datosFooter ul{
         font-size:medium;

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-06-2022 a las 18:29:10
--- Versión del servidor: 10.4.20-MariaDB
--- Versión de PHP: 7.4.22
+-- Tiempo de generación: 22-06-2022 a las 07:06:09
+-- Versión del servidor: 10.4.21-MariaDB
+-- Versión de PHP: 7.3.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,12 +29,12 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `medico` (
   `nro_matricula` int(11) NOT NULL,
+  `id_secretaria` int(11) DEFAULT NULL,
   `medico_nombre` varchar(30) NOT NULL,
   `medico_apellido` varchar(30) NOT NULL,
   `obra_social` int(11) NOT NULL,
   `medico_dni` int(30) NOT NULL,
   `especialidad` varchar(50) NOT NULL,
-  `id_secretaria` int(11) NOT NULL,
   `inicio_horario_atencion` time NOT NULL,
   `fin_horario_atencion` time NOT NULL,
   `contrasenia` varchar(100) NOT NULL
@@ -44,17 +44,17 @@ CREATE TABLE `medico` (
 -- Volcado de datos para la tabla `medico`
 --
 
-INSERT INTO `medico` (`nro_matricula`, `medico_nombre`, `medico_apellido`, `obra_social`, `medico_dni`, `especialidad`, `id_secretaria`, `inicio_horario_atencion`, `fin_horario_atencion`, `contrasenia`) VALUES
-(150448, 'Curtice', 'Illiston', 1, 16764263, 'Oftalmologia', 0, '08:00:00', '16:00:00', 'NVdy8X98LZc'),
-(159015, 'Zacharias', 'Vasilenko', 1, 23347742, 'Odontologia', 0, '08:00:00', '16:00:00', 'WNW4SgHA'),
-(185337, 'Brander', 'Mundle', 4, 37287103, 'Oftalmologia', 0, '08:00:00', '16:00:00', 'iHQQKc8869Wm'),
-(290340, 'Lina', 'Tames', 2, 35127199, 'Pediatria', 0, '08:00:00', '16:00:00', 'VP2uPoRbYjI'),
-(290480, 'Titus', 'Harbord', 1, 38309690, 'Pediatria', 0, '08:00:00', '16:00:00', '32l8Bi'),
-(308343, 'Teddi', 'Bunstone', 2, 32310190, 'Otorrinolaringologia', 0, '08:00:00', '16:00:00', 'e2k5ExF3'),
-(322491, 'Chad', 'Klemps', 4, 39968623, 'Odontologia', 0, '08:00:00', '16:00:00', '61nDJm'),
-(330956, 'Myles', 'Mankor', 4, 35572155, 'Otorrinolaringologia', 0, '08:00:00', '16:00:00', '5uCEoQ2g8'),
-(344042, 'Thaxter', 'Woloschin', 4, 17092412, 'Pediatria', 0, '08:00:00', '16:00:00', 'TZcYsYBW0I'),
-(385739, 'Violetta', 'Erskin', 1, 16153350, 'Otorrinolaringologia', 0, '08:00:00', '16:00:00', 'JEUZXgWuUZI');
+INSERT INTO `medico` (`nro_matricula`, `id_secretaria`, `medico_nombre`, `medico_apellido`, `obra_social`, `medico_dni`, `especialidad`, `inicio_horario_atencion`, `fin_horario_atencion`, `contrasenia`) VALUES
+(150448, NULL, 'Curtice', 'Illiston', 1, 16764263, 'Oftalmologia', '08:00:00', '16:00:00', 'NVdy8X98LZc'),
+(159015, NULL, 'Zacharias', 'Vasilenko', 1, 23347742, 'Odontologia', '08:00:00', '16:00:00', 'WNW4SgHA'),
+(185337, NULL, 'Brander', 'Mundle', 4, 37287103, 'Oftalmologia', '08:00:00', '16:00:00', 'iHQQKc8869Wm'),
+(290340, NULL, 'Lina', 'Tames', 2, 35127199, 'Pediatria', '08:00:00', '16:00:00', 'VP2uPoRbYjI'),
+(290480, NULL, 'Titus', 'Harbord', 1, 38309690, 'Pediatria', '08:00:00', '16:00:00', '32l8Bi'),
+(308343, NULL, 'Teddi', 'Bunstone', 2, 32310190, 'Otorrinolaringologia', '08:00:00', '16:00:00', 'e2k5ExF3'),
+(322491, NULL, 'Chad', 'Klemps', 4, 39968623, 'Odontologia', '08:00:00', '16:00:00', '61nDJm'),
+(330956, NULL, 'Myles', 'Mankor', 4, 35572155, 'Otorrinolaringologia', '08:00:00', '16:00:00', '5uCEoQ2g8'),
+(344042, NULL, 'Thaxter', 'Woloschin', 4, 17092412, 'Pediatria', '08:00:00', '16:00:00', 'TZcYsYBW0I'),
+(385739, NULL, 'Violetta', 'Erskin', 1, 16153350, 'Otorrinolaringologia', '08:00:00', '16:00:00', 'JEUZXgWuUZI');
 
 -- --------------------------------------------------------
 
@@ -138,7 +138,9 @@ INSERT INTO `turno` (`id_turno`, `nro_matricula`, `id_paciente`, `horario_turno`
 --
 ALTER TABLE `medico`
   ADD PRIMARY KEY (`nro_matricula`),
-  ADD KEY `obra_social` (`obra_social`);
+  ADD KEY `obra_social` (`obra_social`),
+  ADD KEY `id_secretaria` (`id_secretaria`),
+  ADD KEY `id_secretaria_2` (`id_secretaria`);
 
 --
 -- Indices de la tabla `obrasocial`
@@ -192,7 +194,8 @@ ALTER TABLE `turno`
 -- Filtros para la tabla `medico`
 --
 ALTER TABLE `medico`
-  ADD CONSTRAINT `medico_ibfk_1` FOREIGN KEY (`obra_social`) REFERENCES `obrasocial` (`id_obra_social`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `medico_ibfk_1` FOREIGN KEY (`obra_social`) REFERENCES `obrasocial` (`id_obra_social`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `medico_ibfk_2` FOREIGN KEY (`id_secretaria`) REFERENCES `secretaria` (`id_secretaria`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `paciente`

@@ -114,7 +114,23 @@ class TurnoFacilModel
     $sentencia = $this->db->prepare( "UPDATE usuario set activo = ? where id_usuario =?");
     $sentencia->execute(array(1,$id));
   */
+  function GetMedicos(){
+    $sentencia = $this->db->prepare("SELECT * FROM medico M JOIN obrasocial O on O.id_obra_social = M.obra_social");
+    $sentencia->execute();
+    return $sentencia->fetchAll(PDO::FETCH_OBJ);
+  }
+  
+  
+  function GetSecretarias(){
+    $sentencia = $this->db->prepare("SELECT * FROM secretaria");
+    $sentencia->execute();
+    return $sentencia->fetchAll(PDO::FETCH_OBJ);
+  }
 
+  function AsignarSecretaria($id_secretaria,$nro_matricula){
+    $sentencia = $this->db->prepare("UPDATE medico SET id_secretaria=? WHERE nro_matricula=?");
+    $sentencia->execute(array($id_secretaria,$nro_matricula));
+  }
 
 }
 

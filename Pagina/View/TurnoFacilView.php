@@ -43,6 +43,13 @@ class TurnoFacilView
     $this->Smarty->assign('medico', $medico);
     $this->Smarty->display('templates/HorariosTurnos.tpl'); 
   }
+
+  function mostrarAsiganadorMedicos($Titulo,$secretarias,$medicos){ //  DEJE ESTE COMO EJEMPLO POR SI NO RECUERDAN COMO ES
+    $this->Smarty->assign('Titulo',$Titulo);
+    $this->Smarty->assign('secretarias',$secretarias);
+    $this->Smarty->assign('medicos',$medicos);
+    $this->Smarty->display('templates/asignarMedicos.tpl');
+  }
   
 }
   ?>

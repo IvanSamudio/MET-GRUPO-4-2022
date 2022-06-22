@@ -216,6 +216,27 @@ private function getBodyContent($title, $body,$header=NULL, $footer=NULL){
     $message = getBodyContent($title, $message, $header);
     return enviarEmail($mail,$mail,$title,$message); 
   }
+
+
+  function mostrarAsignadorMedicos(){
+    $medicos = $this->model->GetMedicos();
+    $secretarias = $this->model->GetSecretarias();
+    $this->view->mostrarAsiganadorMedicos($this->Titulo,$secretarias,$medicos);
+  }
+
+  function AsignarMedico(){
+    $datos = explode(",", $_POST["medicoSeleccionado"]);
+    $id_secretaria=$datos[1];
+    $nro_matricula=$datos[0];
+    $this->model->AsignarSecretaria($id_secretaria,$nro_matricula);
+    $this->mostrarAsignadorMedicos();
+  }
+
+
+  
+
+
+
 }
 
 ?>

@@ -11,6 +11,8 @@ class ConfigApp
         'medicosConObra' => 'MedicoController#filtroMedico',
         'filtroTurnos'=> 'TurnoFacilController#getHorariosTurnoMedico',
         'notificar'=> 'TurnoFacilController#notificar_turno',
+        'asignadorMedicos'=> 'TurnoFacilController#mostrarAsignadorMedicos',
+        'asignarMedico'=> 'TurnoFacilController#AsignarMedico',
 
     ];
 
