@@ -16,6 +16,8 @@ class ConfigApp
         'mostrarPersonal'=> 'TurnoFacilController#mostrarPersonal',
         'agregarSecretaria'=> 'TurnoFacilController#mostrarFormSecretaria',
         'cargarSecretaria'=> 'TurnoFacilController#cargarSecretaria',
+        'agregarMedico'=> 'TurnoFacilController#mostrarFormMedico',
+        'cargarMedico'=> 'TurnoFacilController#cargarMedico',
 
     ];
 

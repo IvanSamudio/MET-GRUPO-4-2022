@@ -137,6 +137,17 @@ class TurnoFacilModel
     $sentencia->execute(array($nombreUsuario,$nombre,$apellido,$dni,$contrasenia));
   }
 
+  function GetObrasSociales(){
+    $sentencia = $this->db->prepare("SELECT * FROM obrasocial");
+    $sentencia->execute();
+    return $sentencia->fetchAll(PDO::FETCH_OBJ);
+  }
+
+  function InsertMedico($nombreUsuario,$contrasenia,$nroMatricula,$nombre,$apellido,$obraSocial,$dni,$especialidad){
+    $sentencia = $this->db->prepare("INSERT INTO medico(nro_matricula,medico_nombre,medico_apellido,obra_social,medico_dni,especialidad,contrasenia,nombreUsuario) VALUES(?,?,?,?,?,?,?,?)");
+    $sentencia->execute(array($nroMatricula,$nombre,$apellido,$obraSocial,$dni,$especialidad,$contrasenia,$nombreUsuario));
+  }
+
 }
 
 

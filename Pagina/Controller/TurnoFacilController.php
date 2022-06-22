@@ -235,7 +235,8 @@ private function getBodyContent($title, $body,$header=NULL, $footer=NULL){
 
   function mostrarPersonal(){
     $secretarias = $this->model->GetSecretarias();
-    $this->view->mostrarPersonal($this->Titulo,$secretarias);
+    $medicos = $this->model->GetMedicos();
+    $this->view->mostrarPersonal($this->Titulo,$secretarias,$medicos);
   }
 
   function mostrarFormSecretaria(){
@@ -250,6 +251,24 @@ private function getBodyContent($title, $body,$header=NULL, $footer=NULL){
     $dni = $_POST["dni"];
     $this->model->InsertSecretaria($nombreUsuario,$contrasenia,$nombre,$apellido,$dni);
     $this->mostrarFormSecretaria();
+  }
+
+  function mostrarFormMedico(){
+    $obrasSociales = $this->model->GetObrasSociales();
+    $this->view->mostrarFormMedico($this->Titulo,$obrasSociales);
+  }
+
+  function cargarMedico(){
+    $nombreUsuario = $_POST["nombreUsuario"];
+    $contrasenia = password_hash($_POST["contrasenia"],PASSWORD_DEFAULT);
+    $nroMatricula = $_POST["nroMatricula"];
+    $nombre = $_POST["nombre"];
+    $apellido = $_POST["apellido"];
+    $obraSocial = $_POST["obraSocial"];
+    $dni = $_POST["dni"];
+    $especialidad = $_POST["especialidad"];
+    $this->model->InsertMedico($nombreUsuario,$contrasenia,$nroMatricula,$nombre,$apellido,$obraSocial,$dni,$especialidad);
+    $this->mostrarFormMedico();
   }
 
   
