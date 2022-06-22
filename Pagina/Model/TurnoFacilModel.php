@@ -132,6 +132,11 @@ class TurnoFacilModel
     $sentencia->execute(array($id_secretaria,$nro_matricula));
   }
 
+  function InsertSecretaria($nombreUsuario,$contrasenia,$nombre,$apellido,$dni){
+    $sentencia = $this->db->prepare("INSERT INTO secretaria(nombreUsuario, secretaria_nombre,secretaria_apellido,secretaria_dni,secretaria_contrasenia) VALUES(?,?,?,?,?)");
+    $sentencia->execute(array($nombreUsuario,$nombre,$apellido,$dni,$contrasenia));
+  }
+
 }
 
 

@@ -233,6 +233,25 @@ private function getBodyContent($title, $body,$header=NULL, $footer=NULL){
   }
 
 
+  function mostrarPersonal(){
+    $secretarias = $this->model->GetSecretarias();
+    $this->view->mostrarPersonal($this->Titulo,$secretarias);
+  }
+
+  function mostrarFormSecretaria(){
+    $this->view->mostrarFormSecretaria($this->Titulo);
+  }
+
+  function cargarSecretaria(){
+    $nombreUsuario = $_POST["nombreUsuario"];
+    $contrasenia = password_hash($_POST["contrasenia"],PASSWORD_DEFAULT);
+    $nombre = $_POST["nombre"];
+    $apellido = $_POST["apellido"];
+    $dni = $_POST["dni"];
+    $this->model->InsertSecretaria($nombreUsuario,$contrasenia,$nombre,$apellido,$dni);
+    $this->mostrarFormSecretaria();
+  }
+
   
 
 

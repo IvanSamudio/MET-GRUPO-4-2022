@@ -13,6 +13,9 @@ class ConfigApp
         'notificar'=> 'TurnoFacilController#notificar_turno',
         'asignadorMedicos'=> 'TurnoFacilController#mostrarAsignadorMedicos',
         'asignarMedico'=> 'TurnoFacilController#AsignarMedico',
+        'mostrarPersonal'=> 'TurnoFacilController#mostrarPersonal',
+        'agregarSecretaria'=> 'TurnoFacilController#mostrarFormSecretaria',
+        'cargarSecretaria'=> 'TurnoFacilController#cargarSecretaria',
 
     ];
 

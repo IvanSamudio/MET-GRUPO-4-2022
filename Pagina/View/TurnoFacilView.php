@@ -50,6 +50,18 @@ class TurnoFacilView
     $this->Smarty->assign('medicos',$medicos);
     $this->Smarty->display('templates/asignarMedicos.tpl');
   }
+
+  function mostrarPersonal($Titulo,$secretarias){ //  DEJE ESTE COMO EJEMPLO POR SI NO RECUERDAN COMO ES
+    $this->Smarty->assign('Titulo',$Titulo);
+    $this->Smarty->assign('secretarias',$secretarias);
+    //$this->Smarty->assign('medicos',$medicos);
+    $this->Smarty->display('templates/personal.tpl');
+  }
+
+  function mostrarFormSecretaria($Titulo){ //  DEJE ESTE COMO EJEMPLO POR SI NO RECUERDAN COMO ES
+    $this->Smarty->assign('Titulo',$Titulo);
+    $this->Smarty->display('templates/agregarSecretaria.tpl');
+  }
   
 }
   ?>
