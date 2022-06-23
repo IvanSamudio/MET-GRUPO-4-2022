@@ -1,4 +1,5 @@
 {include file="Header.tpl"}
+{include file="navBar.tpl"}
 
 <div class="tabla">
 <table class="table table-striped table-hover">

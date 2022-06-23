@@ -5,4 +5,7 @@
   <li class="nav-item">
     <a class="nav-link" href="{$basehref}asignadorMedicos">Asignar Medicos</a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{$basehref}logOut">Cerrar Sesion</a>
+  </li>
 </ul>
