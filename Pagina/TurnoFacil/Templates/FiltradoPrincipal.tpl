@@ -1,4 +1,5 @@
 {include file="Header.tpl"}
+{include file="navBar.tpl"}
 
 <main class="containerFil">
 

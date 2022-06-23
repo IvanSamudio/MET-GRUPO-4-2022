@@ -271,6 +271,13 @@ private function getBodyContent($title, $body,$header=NULL, $footer=NULL){
     $this->mostrarFormMedico();
   }
 
+  function mostrarSecretaria(){
+    session_start();
+    $id_secretaria = $_SESSION["id"];
+    $secretaria = $this->model->GetSecretaria($id_secretaria);
+    $this->view->mostrarSecretaria($this->Titulo,$secretaria);
+  }
+
   
 
 

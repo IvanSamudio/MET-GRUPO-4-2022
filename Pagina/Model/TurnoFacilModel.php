@@ -127,6 +127,12 @@ class TurnoFacilModel
     return $sentencia->fetchAll(PDO::FETCH_OBJ);
   }
 
+  function GetSecretaria($id_secretaria){
+    $sentencia = $this->db->prepare("SELECT * FROM secretaria WHERE id_secretaria=?");
+    $sentencia->execute([$id_secretaria]);
+    return $sentencia->fetch(PDO::FETCH_OBJ);
+  }
+
   function AsignarSecretaria($id_secretaria,$nro_matricula){
     $sentencia = $this->db->prepare("UPDATE medico SET id_secretaria=? WHERE nro_matricula=?");
     $sentencia->execute(array($id_secretaria,$nro_matricula));
@@ -147,6 +153,15 @@ class TurnoFacilModel
     $sentencia = $this->db->prepare("INSERT INTO medico(nro_matricula,medico_nombre,medico_apellido,obra_social,medico_dni,especialidad,contrasenia,nombreUsuario) VALUES(?,?,?,?,?,?,?,?)");
     $sentencia->execute(array($nroMatricula,$nombre,$apellido,$obraSocial,$dni,$especialidad,$contrasenia,$nombreUsuario));
   }
+
+  function getUser($nombreUsuario)   {
+    //$sentencia = $this->db->prepare("SELECT * FROM medico M WHERE M.nombreUsuario = ? AND M.contrasenia = ?");
+    $sentencia = $this->db->prepare("SELECT s.id_secretaria as id,s.secretaria_contrasenia as contrasenia, S.nombreUsuario FROM secretaria S WHERE S.nombreUsuario = ?");
+    $sentencia->execute([$nombreUsuario]);
+    $objeto = $sentencia->fetch(PDO::FETCH_OBJ);
+    //$objeto->tipoUser = "secretaria";
+    return $objeto;
+}
 
 }
 

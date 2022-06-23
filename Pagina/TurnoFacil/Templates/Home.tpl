@@ -1,4 +1,5 @@
 {include file="Header.tpl"}
+{include file="navBar.tpl"}
 <main class="container">
 <div>
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">

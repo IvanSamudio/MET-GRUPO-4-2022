@@ -215,6 +215,12 @@ label.form-label {
     width: auto;
 }
 
+.cartaPresentacion{
+    margin-top: 5%;
+    text-align: center;
+    padding-bottom: 30%;
+}
+
 @media screen and (max-width: 1655px) {
     .datosFooter ul{
         font-size:medium;
