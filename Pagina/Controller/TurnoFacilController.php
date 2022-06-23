@@ -278,6 +278,13 @@ private function getBodyContent($title, $body,$header=NULL, $footer=NULL){
     $this->view->mostrarSecretaria($this->Titulo,$secretaria);
   }
 
+  function mostrarMedico(){
+    session_start();
+    $nro_matricula = $_SESSION["id"];
+    $medico = $this->model->getMedico($nro_matricula);
+    $this->view->mostrarMedico($this->Titulo,$medico);
+  }
+
   
 
 
