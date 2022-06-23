@@ -64,8 +64,9 @@ class TurnoFacilView
     $this->Smarty->display('templates/agregarMedico.tpl');
   }
 
-  function mostrarLogin($Titulo){
+  function mostrarLogin($Titulo,$Mensaje){
     $this->Smarty->assign('Titulo',$Titulo);
+    $this->Smarty->assign('mensaje',$Mensaje);
     $this->Smarty->display('templates/login.tpl');
   }
 
@@ -73,6 +74,12 @@ class TurnoFacilView
     $this->Smarty->assign('Titulo',$Titulo);
     $this->Smarty->assign('secretaria',$secretaria);
     $this->Smarty->display('templates/secretariaHome.tpl');
+  }
+
+  function mostrarMedico($Titulo,$medico){ 
+    $this->Smarty->assign('Titulo',$Titulo);
+    $this->Smarty->assign('medico',$medico);
+    $this->Smarty->display('templates/medicoHome.tpl');
   }
 
   

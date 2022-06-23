@@ -18,7 +18,7 @@ class LoginController
   }
 
   function mostrarLogin(){
-    $this->view->mostrarLogin($this->Titulo);
+    $this->view->mostrarLogin($this->Titulo,"");
   }
 
   function logOut(){
@@ -31,18 +31,27 @@ class LoginController
       $nombreUsuario = $_POST["nombreUsuario"];
       $contrasenia = $_POST["contrasenia"];
       $dbUser = $this->model->getUser($nombreUsuario);
-      if($dbUser != false){
+      if($dbUser!= false){
         if (password_verify($contrasenia, $dbUser->contrasenia)){
             session_start();
             $_SESSION["nombreUsuario"] = $dbUser->nombreUsuario;
             $_SESSION["id"]= $dbUser->id;
-            header(SECRETARIA);
+            if($dbUser->tipoUser == "secretaria"){
+              header(SECRETARIA);
+            }else if($dbUser->tipoUser == "medico"){
+              header(MEDICO);
+            }
+            
         }else{
-          //$this->view->mostrarLogin("Contraseña incorrecta");
+          $this->view->mostrarLogin($this->Titulo,"Contraseña incorrecta");
 
         }
     }else if($nombreUsuario == "ADMIN" && $contrasenia=="ADMIN"){
       header(ADMIN);
+    }else if($nombreUsuario == "PACIENTE" && $contrasenia=="PACIENTE"){
+      header(PACIENTE);
+    }else{
+      $this->view->mostrarLogin($this->Titulo,"El usuario no existe");
     }
   }
 

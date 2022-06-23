@@ -3,6 +3,7 @@
     <form action="verificarLogin" method="POST">
           <input type="text" name="nombreUsuario" placeholder="NOMBRE USUARIO">
           <input type="password" name="contrasenia"  placeholder="CONTRASEÑA">
+          <p>{$mensaje}</p>
           <input type="submit" value="enviar">
     </form>    
 </main>
