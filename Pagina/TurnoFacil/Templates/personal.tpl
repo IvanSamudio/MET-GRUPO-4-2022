@@ -5,7 +5,7 @@
 <main class="container">
     <h1>{$Titulo}</h1>
     {include file="subNavAdmin.tpl"}
-    <table id="tabla-secretaria">
+    <table class="tabla-secretaria">
         <thead>
             <tr>
                 <th>Nombre</th>
@@ -13,6 +13,8 @@
                 <th>DNI</th>
                 <th>Telefono</th>
                 <th>Medicos Asignados</th>
+                <th>Editar</th>
+                <th>Borrar</th>
             </tr>            
         </thead>
         <tbody>
@@ -23,12 +25,12 @@
                     <td>{$secretaria->secretaria_dni}</td>
                     <td>{$secretaria->secretaria_dni}</td>
                     <td>{$secretaria->secretaria_dni}</td>
-                    <td><a href="editarSecretaria/{$id_secretaria}">Editar</a></td>
-                    <td><a href="borrarSecretaria/{$id_secretaria}">Borrar</a></td>
+                    <td><a><img class="boton-tabla-secretaria" src="../TurnoFacil/images/boton-editar.png"></a></td>
+                    <td><a><img class="boton-tabla-secretaria" src="../TurnoFacil/images/boton-borrar.png"></a></td>
                 </tr>
             {/foreach}
         </tbody>
     </table>
-    <button id="btn-agregar-secretaria" href="agregarSecretaria">Agregar</button>
+    <a class="btn-agregar-secretaria" href="agregarSecretaria">Agregar</a>
 </main>
 {include file="Footer.tpl"}

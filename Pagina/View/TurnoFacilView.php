@@ -64,6 +64,11 @@ class TurnoFacilView
     $this->Smarty->display('templates/agregarMedico.tpl');
   }
 
+  function mostrarFormSecretaria($Titulo) {
+    $this->Smarty->assign('Titulo', $Titulo);
+    $this->Smarty->display('templates/agregarSecretaria.tpl');
+  }
+
   function mostrarLogin($Titulo,$Mensaje){
     $this->Smarty->assign('Titulo',$Titulo);
     $this->Smarty->assign('mensaje',$Mensaje);

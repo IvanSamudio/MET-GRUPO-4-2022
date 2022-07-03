@@ -221,26 +221,32 @@ label.form-label {
     padding-bottom: 30%;
 }
 
-#tabla-secretaria {
+.tabla-secretaria {
     width: 100%;
     height: 100%;
 }
 
-#tabla-secretaria thead {
+.tabla-secretaria thead {
     background: lightcyan;
     border-bottom: solid 1px black;
 }
 
-#tabla-secretaria thead th {
+.tabla-secretaria thead th {
     padding: 1%;
 }
 
-#tabla-secretaria tbody td {
+.tabla-secretaria tbody td {
     padding: 1%;
 }
 
-#tabla-secretaria tbody tr:nth-child(even) {
+.tabla-secretaria tbody tr:nth-child(even) {
     background: rgb(235, 235, 235);
+}
+
+.boton-tabla-secretaria {
+    height: 28px;
+    width: 28px;
+    filter: drop-shadow(2px 3px 2px rgba(0, 0, 0, 0.6));
 }
 
 
