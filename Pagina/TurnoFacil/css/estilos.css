@@ -221,6 +221,11 @@ label.form-label {
     padding-bottom: 30%;
 }
 
+.container-tabla-secretaria {
+    display:flex;
+    flex-flow: column wrap;
+}
+
 .tabla-secretaria {
     width: 100%;
     height: 100%;
@@ -249,6 +254,25 @@ label.form-label {
     filter: drop-shadow(2px 3px 2px rgba(0, 0, 0, 0.6));
 }
 
+.container-boton-agregar {
+    padding: 6px 60px;
+    color: white;
+    background-color: #69bfb7;
+    align-self: flex-end;
+    margin-top: 20px;
+}
+
+.container-boton-agregar a:link {
+    text-decoration: none;
+    color: inherit;
+    cursor: auto;
+}
+
+.container-boton-agregar a:visited {
+    text-decoration: none;
+    color: inherit;
+    cursor: auto;
+}
 
 @media screen and (max-width: 1655px) {
     .datosFooter ul{
