@@ -33,7 +33,7 @@
             </tbody>
         </table>
         <div class="container-boton-agregar">
-            <a href="agregarSecretaria">Agregar</a>
+            <a class="btn btn-primary boton-cargar-secretaria" href="agregarSecretaria">AGREGAR</a>
         </div>
     </div>
 </main>

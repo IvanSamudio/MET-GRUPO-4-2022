@@ -255,23 +255,60 @@ label.form-label {
 }
 
 .container-boton-agregar {
-    padding: 6px 60px;
+    display: flex;
+    flex-flow: row-reverse;     
+    margin-top: 20px;
+    margin-bottom: 5%;
+}
+
+.container-boton-agregar a {
+    text-align: center;
+    width: 25%;
+}
+
+.container-boton-agregar a:link, .botones-form-secretaria a {
     color: white;
+    text-decoration: none;
+}
+
+.container-boton-agregar a:visited, .botones-form-secretaria a {
+    text-decoration: none;
+    color: white;
+}
+
+.form-secretaria {
+    display: flex;
+    flex-flow: column wrap;
+    width: 50%;
+    margin: 2% 0px;
+}
+
+.form-secretaria div{
+    margin: 2% 0px;
+}
+
+.botones-form-secretaria {
+    display:flex;
+    justify-content: space-between;
+}
+
+.boton-cargar-secretaria, .botones-form-secretaria a {
+    border: none;
+    width: 45%;
+    font-size: 1rem;
+    border-radius: 0px;
+    padding: 6px 6%;
+    color: rgb(44, 44, 44);
     background-color: #69bfb7;
     align-self: flex-end;
     margin-top: 20px;
 }
 
-.container-boton-agregar a:link {
-    text-decoration: none;
-    color: inherit;
-    cursor: auto;
-}
-
-.container-boton-agregar a:visited {
-    text-decoration: none;
-    color: inherit;
-    cursor: auto;
+.botones-form-secretaria a {
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    background-color: rgb(111, 111, 111);
 }
 
 @media screen and (max-width: 1655px) {

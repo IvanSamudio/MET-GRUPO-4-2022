@@ -4,17 +4,30 @@
 <main class="container">
     {include file="subNavAdmin.tpl"}
     <form class="form-secretaria" action="cargarSecretaria" method="POST">
-        <label>Nombre de Usuario:</label>
-        <input type="text" name="nombreUsuario">
-        <label>Contraseña:</label>
-        <input type="text" name="contrasenia">
-        <label>Nombre:</label>
-        <input type="text" name="nombre">
-        <label>Apellido:</label>
-        <input type="text" name="apellido">
-        <label>DNI:</label>
-        <input type="number" name="dni">
-        <input type="submit" value="Cargar Secretaria">
+        <div class="input-group">
+            <label class="input-group-text">Nombre de Usuario</label>
+            <input type="text" class="form-control" name="nombreUsuario" required>
+        </div>
+        <div class="input-group">
+            <label class="input-group-text">Contraseña</label>
+            <input type="text" class="form-control" name="contrasenia" required>
+        </div>
+        <div class="input-group">
+            <label class="input-group-text">Nombre</label>
+            <input type="text" class="form-control" name="nombre" required>
+        </div>
+        <div class="input-group">
+            <label class="input-group-text">Apellido</label>
+            <input type="text" class="form-control" name="apellido" required>
+        </div>
+        <div class="input-group">
+            <label class="input-group-text">DNI</label>
+            <input type="number" class="form-control" name="dni" required>
+        </div>
+        <div class="botones-form-secretaria">
+            <a href="mostrarPersonal">VOLVER</a> 
+            <input type="submit" class="btn btn-primary boton-cargar-secretaria" value="CARGAR">
+        </div>
     </form> 
 </main>
 {include file="Footer.tpl"}
