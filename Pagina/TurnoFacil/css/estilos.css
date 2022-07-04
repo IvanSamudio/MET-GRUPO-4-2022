@@ -300,6 +300,7 @@ label.form-label {
     padding: 6px 6%;
     color: rgb(44, 44, 44);
     background-color: #69bfb7;
+    border: #6ab4ad 1px solid;
     align-self: flex-end;
     margin-top: 20px;
 }
@@ -308,6 +309,7 @@ label.form-label {
     color: white;
     text-align: center;
     font-weight: 400;
+    border-color: rgb(111,111,111);
     background-color: rgb(111, 111, 111);
 }
 
