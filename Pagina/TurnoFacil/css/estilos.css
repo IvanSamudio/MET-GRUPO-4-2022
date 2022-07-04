@@ -188,6 +188,20 @@ label.form-label {
     color: #F2F2F2;
 }
 
+
+.btn-agregar {
+    background-color: #69bfb7 !important;
+    margin-right: 0!important;
+    margin-top: 0.5% !important;
+    margin-bottom: 5% !important;
+    padding: 10%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: rgb(85, 153, 146);
+    color: #F2F2F2;
+
+}
+
 .btn:hover {
     color: #F2F2F2;
     border-color: #559992 !important;

@@ -1,29 +1,31 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-06-01 21:38:11
+/* Smarty version 4.1.0, created on 2022-07-04 01:33:19
   from 'C:\xampp\htdocs\MET-GRUPO-4-2022\Pagina\TurnoFacil\Templates\listadoDeMedicosFiltrado.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6297c023c26f96_09942107',
+  'unifunc' => 'content_62c2273f4fa8c8_43065179',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '126c09330e30ba5bd783ed4da24c23131af175aa' => 
     array (
       0 => 'C:\\xampp\\htdocs\\MET-GRUPO-4-2022\\Pagina\\TurnoFacil\\Templates\\listadoDeMedicosFiltrado.tpl',
-      1 => 1654111246,
+      1 => 1656865039,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:Header.tpl' => 1,
+    'file:navBar.tpl' => 1,
     'file:Footer.tpl' => 1,
   ),
 ),false)) {
-function content_6297c023c26f96_09942107 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62c2273f4fa8c8_43065179 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:Header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+$_smarty_tpl->_subTemplateRender("file:navBar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 <div class="tabla">
