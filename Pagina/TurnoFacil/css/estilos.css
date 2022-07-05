@@ -9,6 +9,8 @@ body{
 
 .containerFil{
     height: 62vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .carousel-item{
@@ -21,7 +23,7 @@ body{
 }
 
 .contBotones{
-    min-height: 40vh!important;
+    min-height: 20vh!important;
     width: 100%;
     background-color: rgb(245, 238, 238) !important;
     display: flex;
