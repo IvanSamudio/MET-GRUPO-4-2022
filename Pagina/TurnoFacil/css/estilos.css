@@ -206,6 +206,21 @@ label.form-label {
     display: flex;
 }
 
+.navAdmin{
+    flex-wrap:nowrap;
+}
+
+.navAdmin li{
+    margin: 20px 0 0 0 !important;
+    width: auto;
+}
+
+.cartaPresentacion{
+    margin-top: 5%;
+    text-align: center;
+    padding-bottom: 30%;
+}
+
 @media screen and (max-width: 1655px) {
     .datosFooter ul{
         font-size:medium;

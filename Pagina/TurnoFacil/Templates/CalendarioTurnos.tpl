@@ -1,4 +1,5 @@
 {include file="Header.tpl"}
+{include file="navBar.tpl"}
 <div class="container-calendario">
 <h1>{$medico->medico_nombre} {$medico->medico_apellido}</h1>
     {foreach from=$meses item=nombreMes key=nroMes}

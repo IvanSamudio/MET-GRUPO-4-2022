@@ -24,7 +24,6 @@ class MedicoController{
     function mostrarMedicos(){
         $medicos = $this->model->GetMedicos();
         var_dump($medicos);
-        
     }
 
     function mostrarMedicosPorEspecialidad($especialidad){

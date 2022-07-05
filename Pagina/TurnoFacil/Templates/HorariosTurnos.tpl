@@ -1,4 +1,5 @@
 {include file="Header.tpl"}
+{include file="navBar.tpl"}
 
 <div class="container">
     <ul class="horarios">

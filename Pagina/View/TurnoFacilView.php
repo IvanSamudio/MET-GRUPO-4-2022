@@ -43,6 +43,46 @@ class TurnoFacilView
     $this->Smarty->assign('medico', $medico);
     $this->Smarty->display('templates/HorariosTurnos.tpl'); 
   }
+
+  function mostrarAsiganadorMedicos($Titulo,$secretarias,$medicos){ //  DEJE ESTE COMO EJEMPLO POR SI NO RECUERDAN COMO ES
+    $this->Smarty->assign('Titulo',$Titulo);
+    $this->Smarty->assign('secretarias',$secretarias);
+    $this->Smarty->assign('medicos',$medicos);
+    $this->Smarty->display('templates/asignarMedicos.tpl');
+  }
+
+  function mostrarPersonal($Titulo,$secretarias,$medicos){ //  DEJE ESTE COMO EJEMPLO POR SI NO RECUERDAN COMO ES
+    $this->Smarty->assign('Titulo',$Titulo);
+    $this->Smarty->assign('secretarias',$secretarias);
+    $this->Smarty->assign('medicos',$medicos);
+    $this->Smarty->display('templates/personal.tpl');
+  }
+
+  function mostrarFormMedico($Titulo,$obrasSociales){ //  DEJE ESTE COMO EJEMPLO POR SI NO RECUERDAN COMO ES
+    $this->Smarty->assign('Titulo',$Titulo);
+    $this->Smarty->assign('obrasSociales',$obrasSociales);
+    $this->Smarty->display('templates/agregarMedico.tpl');
+  }
+
+  function mostrarLogin($Titulo,$Mensaje){
+    $this->Smarty->assign('Titulo',$Titulo);
+    $this->Smarty->assign('mensaje',$Mensaje);
+    $this->Smarty->display('templates/login.tpl');
+  }
+
+  function mostrarSecretaria($Titulo,$secretaria){ 
+    $this->Smarty->assign('Titulo',$Titulo);
+    $this->Smarty->assign('secretaria',$secretaria);
+    $this->Smarty->display('templates/secretariaHome.tpl');
+  }
+
+  function mostrarMedico($Titulo,$medico){ 
+    $this->Smarty->assign('Titulo',$Titulo);
+    $this->Smarty->assign('medico',$medico);
+    $this->Smarty->display('templates/medicoHome.tpl');
+  }
+
+  
   
 }
   ?>
