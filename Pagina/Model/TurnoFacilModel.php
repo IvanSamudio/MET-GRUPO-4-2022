@@ -149,9 +149,9 @@ class TurnoFacilModel
     return $sentencia->fetchAll(PDO::FETCH_OBJ);
   }
 
-  function InsertMedico($nombreUsuario,$contrasenia,$nroMatricula,$nombre,$apellido,$obraSocial,$dni,$especialidad){
-    $sentencia = $this->db->prepare("INSERT INTO medico(nro_matricula,medico_nombre,medico_apellido,obra_social,medico_dni,especialidad,contrasenia,nombreUsuario) VALUES(?,?,?,?,?,?,?,?)");
-    $sentencia->execute(array($nroMatricula,$nombre,$apellido,$obraSocial,$dni,$especialidad,$contrasenia,$nombreUsuario));
+  function InsertMedico($contrasenia,$nroMatricula,$nombre,$apellido,$obraSocial,$dni,$especialidad,$telefono){
+    $sentencia = $this->db->prepare("INSERT INTO medico(nro_matricula,medico_nombre,medico_apellido,obra_social,medico_dni,especialidad,id_secretaria,inicio_horario_atencion,fin_horario_atencion,contrasenia,medico_telefono) VALUES(?,?,?,?,?,?,?,?,?,?,?)");
+    $sentencia->execute(array($nroMatricula,$nombre,$apellido,$obraSocial,$dni,$especialidad,NULL,NULL,NULL,$contrasenia,$telefono));
   }
 
   function getUser($nombreUsuario) {

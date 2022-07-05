@@ -58,8 +58,8 @@ class TurnoFacilView
     $this->Smarty->display('templates/personal.tpl');
   }
 
-  function mostrarFormMedico($Titulo,$obrasSociales){ //  DEJE ESTE COMO EJEMPLO POR SI NO RECUERDAN COMO ES
-    $this->Smarty->assign('Titulo',$Titulo);
+  function mostrarFormMedico($obrasSociales){ 
+    $this->Smarty->assign('tittle','Cargar medico');
     $this->Smarty->assign('obrasSociales',$obrasSociales);
     $this->Smarty->display('templates/agregarMedico.tpl');
   }

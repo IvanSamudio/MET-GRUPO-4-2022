@@ -255,11 +255,10 @@ private function getBodyContent($title, $body,$header=NULL, $footer=NULL){
 
   function mostrarFormMedico(){
     $obrasSociales = $this->model->GetObrasSociales();
-    $this->view->mostrarFormMedico($this->Titulo,$obrasSociales);
+    $this->view->mostrarFormMedico($obrasSociales);
   }
 
   function cargarMedico(){
-    $nombreUsuario = $_POST["nombreUsuario"];
     $contrasenia = password_hash($_POST["contrasenia"],PASSWORD_DEFAULT);
     $nroMatricula = $_POST["nroMatricula"];
     $nombre = $_POST["nombre"];
@@ -267,7 +266,8 @@ private function getBodyContent($title, $body,$header=NULL, $footer=NULL){
     $obraSocial = $_POST["obraSocial"];
     $dni = $_POST["dni"];
     $especialidad = $_POST["especialidad"];
-    $this->model->InsertMedico($nombreUsuario,$contrasenia,$nroMatricula,$nombre,$apellido,$obraSocial,$dni,$especialidad);
+    $telefono = $_POST["telefono"];
+    $this->model->InsertMedico($contrasenia,$nroMatricula,$nombre,$apellido,$obraSocial,$dni,$especialidad,$telefono);
     $this->mostrarFormMedico();
   }
 

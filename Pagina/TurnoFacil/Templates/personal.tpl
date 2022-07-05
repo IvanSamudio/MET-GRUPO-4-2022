@@ -35,6 +35,6 @@
             {/foreach}
         </tbody>
     </table>
-    <button id="btn-agregar-medico" href="agregarMedico" class="btn-agregar rounded">Agregar</button>
+    <a   href="agregarMedico"><button id="btn-agregar-medico" class="btn-agregar rounded">Agregar</button></a>
 </main>
 {include file="Footer.tpl"}
