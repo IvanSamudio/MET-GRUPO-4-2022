@@ -310,6 +310,98 @@ label.form-label {
     padding-bottom: 30%;
 }
 
+.container-tabla-secretaria {
+    display:flex;
+    flex-flow: column wrap;
+}
+
+.tabla-secretaria {
+    width: 100%;
+    height: 100%;
+}
+
+.tabla-secretaria thead {
+    background: lightcyan;
+    border-bottom: solid 1px black;
+}
+
+.tabla-secretaria thead th {
+    padding: 1%;
+}
+
+.tabla-secretaria tbody td {
+    padding: 1%;
+}
+
+.tabla-secretaria tbody tr:nth-child(even) {
+    background: rgb(235, 235, 235);
+}
+
+.boton-tabla-secretaria {
+    height: 28px;
+    width: 28px;
+    filter: drop-shadow(2px 3px 2px rgba(0, 0, 0, 0.6));
+}
+
+.container-boton-agregar {
+    display: flex;
+    flex-flow: row-reverse;     
+    margin-top: 20px;
+    margin-bottom: 5%;
+}
+
+.container-boton-agregar a {
+    text-align: center;
+    width: 25%;
+}
+
+.container-boton-agregar a:link, .botones-form-secretaria a {
+    color: white;
+    text-decoration: none;
+}
+
+.container-boton-agregar a:visited, .botones-form-secretaria a {
+    text-decoration: none;
+    color: white;
+}
+
+.form-secretaria {
+    display: flex;
+    flex-flow: column wrap;
+    width: 50%;
+    margin: 2% 0px;
+}
+
+.form-secretaria div{
+    margin: 2% 0px;
+}
+
+.botones-form-secretaria {
+    display:flex;
+    justify-content: space-between;
+}
+
+.boton-cargar-secretaria, .botones-form-secretaria a {
+    border: none;
+    width: 45%;
+    font-size: 1rem;
+    border-radius: 0px;
+    padding: 6px 6%;
+    color: rgb(44, 44, 44);
+    background-color: #69bfb7;
+    border: #6ab4ad 1px solid;
+    align-self: flex-end;
+    margin-top: 20px;
+}
+
+.botones-form-secretaria a {
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    border-color: rgb(111,111,111);
+    background-color: rgb(111, 111, 111);
+}
+
 @media screen and (max-width: 1655px) {
     .datosFooter ul{
         font-size:medium;
