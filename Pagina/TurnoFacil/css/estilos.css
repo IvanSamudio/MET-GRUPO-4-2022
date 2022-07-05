@@ -151,7 +151,7 @@ img {
 
 li{
     margin: 8% 0px 6% 0px;
-    width: 100%; 
+    width: 100%;
 }
 
 i.bi.bi-facebook {
@@ -213,6 +213,15 @@ label.form-label {
 .navAdmin li{
     margin: 20px 0 0 0 !important;
     width: auto;
+}
+
+.list-group-item{
+    margin: 0px !important;
+}
+
+.btn{
+    border: var(--bs-btn-border-width) solid var#69BFB7;
+    background-color: #69BFB7 !important; 
 }
 
 .cartaPresentacion{
