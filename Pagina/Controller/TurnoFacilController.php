@@ -219,8 +219,10 @@ private function getBodyContent($title, $body,$header=NULL, $footer=NULL){
 
 
   function mostrarAsignadorMedicos(){
+    echo "hola";
     $medicos = $this->model->GetMedicos();
     $secretarias = $this->model->GetSecretarias();
+    //var_dump($secretarias);
     $this->view->mostrarAsiganadorMedicos($this->Titulo,$secretarias,$medicos);
   }
 
