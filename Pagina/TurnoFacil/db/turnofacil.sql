@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-06-2022 a las 01:26:23
--- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 7.3.30
+-- Tiempo de generación: 05-07-2022 a las 23:43:06
+-- Versión del servidor: 10.4.20-MariaDB
+-- Versión de PHP: 8.0.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -109,6 +109,32 @@ INSERT INTO `paciente` (`id_paciente`, `paciente_nombre`, `paciente_apellido`, `
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `secretaria`
+--
+
+CREATE TABLE `secretaria` (
+  `id_secretaria` int(11) NOT NULL,
+  `secretaria_nombre` varchar(20) NOT NULL,
+  `secretaria_apellido` varchar(20) NOT NULL,
+  `secretaria_dni` int(30) NOT NULL,
+  `nombreUsuario` varchar(20) NOT NULL,
+  `secretaria_contrasenia` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `secretaria`
+--
+
+INSERT INTO `secretaria` (`id_secretaria`, `secretaria_nombre`, `secretaria_apellido`, `secretaria_dni`, `nombreUsuario`, `secretaria_contrasenia`) VALUES
+(1, 'Stacy', 'Jordan', 30291576, 'StacyJordan', 'ginFMbda12i4'),
+(2, 'Mary', 'Johnson', 26130471, 'MaryJohnson', 'ubfYF1yi4'),
+(3, 'Linda', 'West', 25391475, 'LindaWest', 'kBI1j3b4B'),
+(4, 'Sofia', 'Reyes', 38123538, 'SofiaReyes', 'unigFY1en'),
+(5, 'Martha', 'Lewis', 21493458, 'MarthaLewis', 'ubfINIFN1o34');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `turno`
 --
 
@@ -139,7 +165,8 @@ INSERT INTO `turno` (`id_turno`, `nro_matricula`, `id_paciente`, `horario_turno`
 --
 ALTER TABLE `medico`
   ADD PRIMARY KEY (`nro_matricula`),
-  ADD KEY `obra_social` (`obra_social`);
+  ADD KEY `obra_social` (`obra_social`),
+  ADD KEY `fk_id_secretaria` (`id_secretaria`);
 
 --
 -- Indices de la tabla `obrasocial`
@@ -154,6 +181,12 @@ ALTER TABLE `obrasocial`
 ALTER TABLE `paciente`
   ADD PRIMARY KEY (`id_paciente`),
   ADD KEY `FK_OBRA_SOCIAL` (`paciente_obra_social`);
+
+--
+-- Indices de la tabla `secretaria`
+--
+ALTER TABLE `secretaria`
+  ADD PRIMARY KEY (`id_secretaria`);
 
 --
 -- Indices de la tabla `turno`
@@ -180,10 +213,26 @@ ALTER TABLE `paciente`
   MODIFY `id_paciente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT de la tabla `secretaria`
+--
+ALTER TABLE `secretaria`
+  MODIFY `id_secretaria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT de la tabla `turno`
 --
 ALTER TABLE `turno`
   MODIFY `id_turno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `medico`
+--
+ALTER TABLE `medico`
+  ADD CONSTRAINT `fk_id_secretaria` FOREIGN KEY (`id_secretaria`) REFERENCES `secretaria` (`id_secretaria`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
