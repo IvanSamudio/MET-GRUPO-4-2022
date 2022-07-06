@@ -7,10 +7,10 @@
         <div>
             <p class="p-3 mb-2 bg-secondary text-white" style="--bs-bg-opacity: .7;">Medicos asignados de <span style="font-weight: 1000;">{$secretaria->secretaria_nombre}</span>:</p>
             <ul class="list-group">
-                {foreach from=$medicos item=$medico}
-                    {if $medico->id_secretaria eq $secretaria->id_secretaria}
-                        <li class="list-group-item">{$medico->medico_nombre}</li>
-                    {/if}
+                {foreach from=$medicos item=medico}
+                {if $medico->id_secretaria eq $secretaria->id_secretaria}
+                    <li class="list-group-item">{$medico->medico_nombre} {$medico->medico_apellido}</li>
+                {/if}
                 {/foreach}
             </ul>
             <p class="p-3 mb-2 bg-secondary text-white" style="--bs-bg-opacity: .5;">Medicos disponibles para asignar: </p>
