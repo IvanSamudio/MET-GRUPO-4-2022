@@ -49,22 +49,7 @@ class AdminModel
     $sentencia->execute(array($nroMatricula,$nombre,$apellido,$obraSocial,$dni,$especialidad,NULL,NULL,NULL,$contrasenia,$telefono,$nombreUsuario));
   }
 
-  function getUser($nombreUsuario) {
-    $sentencia = $this->db->prepare("SELECT s.id_secretaria as id,s.secretaria_contrasenia as contrasenia, S.nombreUsuario FROM secretaria S WHERE S.nombreUsuario = ?");
-    $sentencia->execute([$nombreUsuario]);
-    $objeto = $sentencia->fetch(PDO::FETCH_OBJ);
-    if ($objeto == false){
-      $sentencia = $this->db->prepare("SELECT M.nro_matricula as id,M.contrasenia as contrasenia, M.nombreUsuario FROM medico M WHERE M.nombreUsuario = ?");
-      $sentencia->execute([$nombreUsuario]);
-      $objeto = $sentencia->fetch(PDO::FETCH_OBJ);
-      if($objeto != false){
-        $objeto->tipoUser = "medico";
-      }         
-    }else{
-      $objeto->tipoUser = "secretaria";
-    }
-    return $objeto;
-}
+ 
 
 function getMedico($nro_matricula) {
     //Traigo los turnos de los medicos a partir de la fecha

@@ -1,5 +1,5 @@
 <?php
-require_once "../View/TurnoFacilView.php";
+require_once "../View/AdminView.php";
 require_once "../Model/AdminModel.php";
 
 
@@ -10,7 +10,7 @@ class AdminController{
   private $Titulo;
 
   function __construct(){
-    $this->view = new TurnoFacilView();
+    $this->view = new AdminView();
     $this->Titulo = "Turno Facil";
     $this->model = new AdminModel();
   }

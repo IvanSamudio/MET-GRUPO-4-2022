@@ -16,4 +16,20 @@ class MedicoView{
     $this->Smarty->display('templates/personal.tpl');
   }
 
+  public function showFiltrado($obrasSociales, $especialidades)
+    {
+        $this->Smarty->assign('obraSociales', $obrasSociales);
+        $this->Smarty->assign('especialidades', $especialidades);
+        $this->Smarty->assign('title', 'ELIGE CON LIBERTAD LO MEJOR PARA TU SALUD');
+        $this->Smarty->assign('Titulo', 'Turno facil');
+        $this->Smarty->display('Templates/FiltradoPrincipal.tpl');
+    }
+
+    public function medicosFiltrados($tabla){
+        $this->Smarty->assign('Titulo', 'Medicos Turnofacil');
+        $this->Smarty->assign('medicos', $tabla);
+        $this->Smarty->assign('titulo', 'Turno Facil');
+        $this->Smarty->display('Templates/listadoDeMedicosFiltrado.tpl');
+    }
+
 }

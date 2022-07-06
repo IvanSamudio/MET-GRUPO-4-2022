@@ -1,5 +1,5 @@
 <?php
-class TurnoFacilModel
+class PacienteModel
 {
 
   function __construct()
