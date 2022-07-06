@@ -155,7 +155,7 @@ img {
 
 li{
     margin: 8% 0px 6% 0px;
-    width: 100%;
+    width: 100%; 
 }
 
 i.bi.bi-facebook {
@@ -320,19 +320,10 @@ label.form-label {
     width: auto;
 }
 
-.list-group-item{
-    margin: 0px !important;
-}
-
-.btn{
-    border: var(--bs-btn-border-width) solid var#69BFB7;
-    background-color: #69BFB7 !important; 
-}
-
 .container-asignarMedico{
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     width: 100%;
