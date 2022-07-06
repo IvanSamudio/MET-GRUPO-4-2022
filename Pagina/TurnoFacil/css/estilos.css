@@ -9,6 +9,8 @@ body{
 
 .containerFil{
     height: 62vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .carousel-item{
@@ -21,7 +23,7 @@ body{
 }
 
 .contBotones{
-    min-height: 40vh!important;
+    min-height: 20vh!important;
     width: 100%;
     background-color: rgb(245, 238, 238) !important;
     display: flex;
@@ -64,6 +66,8 @@ body{
 }
 
 footer{
+    position:sticky;
+    margin-bottom: 0%;
     background-color: #69bfb7 !important;
     text-decoration: none !important;
     display: inline-block;
@@ -151,7 +155,7 @@ img {
 
 li{
     margin: 8% 0px 6% 0px;
-    width: 100%; 
+    width: 100%;
 }
 
 i.bi.bi-facebook {
@@ -162,6 +166,93 @@ h3.tittle{
     color: rgb(73, 70, 70);
     padding-top: 2.5%;
     text-align: center;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.logoLogin{
+    width: 70%;
+    height: 20%;
+    margin-block-end: 12%;
+}
+
+.estructuraLogin form {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputLogin{
+    width: 30vw;
+    background-color: #69BFB7;
+    /* opacity: 3.16; */
+    background: #69bfb769;
+    mix-blend-mode: normal;
+    /* opacity: 0.16; */
+    border-radius: 5.33333px 5.33333px 0px 0px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border-bottom: 2px solid #69BFB7;
+}
+
+.inputLogin p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    margin: 5px 0 5px 10px;
+    /* identical to box height, or 133% */
+
+
+    /* Dark_Verde_Primary */
+
+    color: #308C83;
+}
+
+.inputLogin input, .inputLogin input:focus{
+    border: none;
+    background: #69bfb700;
+    outline: none;
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.estructuraLogin{
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.estructuraLogin h4{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 40px;
+    
+    margin: -30px 0 20px 0;
+    /* identical to box height */
+
+
+    /* Dark_Verde_Primary */
+
+    color: #308C83;
+}
+
+#btnSubmit{
+    height: 50px;
+    font-size: 16px;
+    background: #69BFB7;
+    border: none;
+    border-radius: 5px;
+    color: #F2F2F2;
 }
 
 form.container.mb-3 {
@@ -229,10 +320,111 @@ label.form-label {
     width: auto;
 }
 
+.list-group-item{
+    margin: 0px !important;
+}
+
+.btn{
+    border: var(--bs-btn-border-width) solid var#69BFB7;
+    background-color: #69BFB7 !important; 
+}
+
 .cartaPresentacion{
     margin-top: 5%;
     text-align: center;
     padding-bottom: 30%;
+}
+
+.container-tabla-secretaria {
+    display:flex;
+    flex-flow: column wrap;
+}
+
+.tabla-secretaria {
+    width: 100%;
+    height: 100%;
+}
+
+.tabla-secretaria thead {
+    background: lightcyan;
+    border-bottom: solid 1px black;
+}
+
+.tabla-secretaria thead th {
+    padding: 1%;
+}
+
+.tabla-secretaria tbody td {
+    padding: 1%;
+}
+
+.tabla-secretaria tbody tr:nth-child(even) {
+    background: rgb(235, 235, 235);
+}
+
+.boton-tabla-secretaria {
+    height: 28px;
+    width: 28px;
+    filter: drop-shadow(2px 3px 2px rgba(0, 0, 0, 0.6));
+}
+
+.container-boton-agregar {
+    display: flex;
+    flex-flow: row-reverse;     
+    margin-top: 20px;
+    margin-bottom: 5%;
+}
+
+.container-boton-agregar a {
+    text-align: center;
+    width: 25%;
+}
+
+.container-boton-agregar a:link, .botones-form-secretaria a {
+    color: white;
+    text-decoration: none;
+}
+
+.container-boton-agregar a:visited, .botones-form-secretaria a {
+    text-decoration: none;
+    color: white;
+}
+
+.form-secretaria {
+    display: flex;
+    flex-flow: column wrap;
+    width: 50%;
+    margin: 2% 0px;
+}
+
+.form-secretaria div{
+    margin: 2% 0px;
+}
+
+.botones-form-secretaria {
+    display:flex;
+    justify-content: space-between;
+}
+
+.boton-cargar-secretaria, .botones-form-secretaria a {
+    border: none;
+    width: 45%;
+    font-size: 1rem;
+    border-radius: 0px;
+    padding: 6px 6%;
+    color: rgb(44, 44, 44);
+    background-color: #69bfb7;
+    border: #6ab4ad 1px solid;
+    align-self: flex-end;
+    margin-top: 20px;
+}
+
+.botones-form-secretaria a {
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    border-color: rgb(111,111,111);
+    background-color: rgb(111, 111, 111);
 }
 
 @media screen and (max-width: 1655px) {
@@ -253,5 +445,15 @@ label.form-label {
         max-width: 15%;
     }
 
+    figure img{
+        width: 55vw;
+        height: 100vh;
+    }
+    
+    figure{
+        opacity: 0.9;
+        width: 55vw;
+        height: 100vh;
+    }
     
 }

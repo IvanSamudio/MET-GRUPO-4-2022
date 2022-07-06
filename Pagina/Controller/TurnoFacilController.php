@@ -232,7 +232,6 @@ private function getBodyContent($title, $body,$header=NULL, $footer=NULL){
     $this->mostrarAsignadorMedicos();
   }
 
-
   function mostrarPersonal(){
     $secretarias = $this->model->GetSecretarias();
     $medicos = $this->model->GetMedicos();
