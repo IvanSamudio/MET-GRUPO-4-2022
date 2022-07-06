@@ -1,7 +1,7 @@
 {include file="Header.tpl"}
 {include file="navBar.tpl"}
 
-<main class="container">
+<main class="container-asignarMedico">
     {include file="subNavAdmin.tpl"}
     
      {foreach from=$secretarias item=secretaria}

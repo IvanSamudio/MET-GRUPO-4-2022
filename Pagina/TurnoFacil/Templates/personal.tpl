@@ -64,7 +64,6 @@
                             <td>{$secretaria->secretaria_nombre}</td>
                             <td>{$secretaria->secretaria_apellido}</td>
                             <td>{$secretaria->secretaria_dni}</td>
-                            <td>{$secretaria->secretaria_telefono}</td>
                             <td>Ver Lista</td>
                             <td><a><img class="boton-tabla-secretaria" src="../TurnoFacil/images/boton-editar.png"></a></td>
                             <td><a><img class="boton-tabla-secretaria" src="../TurnoFacil/images/boton-borrar.png"></a></td>
