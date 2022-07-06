@@ -1,8 +1,9 @@
 {include file="Header.tpl"}
 {include file="navBar.tpl"}
 
-<div class="container-lista-secretaria">
-    {include file="subNavAdmin.tpl"}
+<div class="container-lista-secretaria "  style="width: 200vh">
+
+    <h1 class=" my-4" >Agregar secretaria</h1>
     <form class="form-secretaria" action="cargarSecretaria" method="POST">
         <div class="input-group">
             <label class="input-group-text">Nombre de Usuario</label>
@@ -25,8 +26,8 @@
             <input type="number" class="form-control" name="dni" required>
         </div>
         <div class="botones-form-secretaria">
-            <a href="mostrarPersonal">VOLVER</a> 
-            <input type="submit" class="btn btn-primary boton-cargar-secretaria" value="CARGAR">
+            <input type="submit" class="btn btn-primary boton-cargar-secretaria" value="Guardar">
+            <a href="mostrarPersonal">Volver</a> 
         </div>
     </form> 
 </div>

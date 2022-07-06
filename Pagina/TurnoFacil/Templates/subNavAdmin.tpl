@@ -2,6 +2,12 @@
   <li class="nav-item">
     <a class="nav-link" href="{$basehref}mostrarPersonal">Personal</a>
   </li>
+    <li class="nav-item">
+    <a class="nav-link" href="{$basehref}mostrarPersonal{'#doctores'}">Doctores</a>
+  </li>
+    <li class="nav-item">
+    <a class="nav-link" href="{$basehref}mostrarPersonal{'#secretarias'}">Secretarias</a>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="{$basehref}asignadorMedicos">Asignar Medicos</a>
   </li>
