@@ -4,7 +4,7 @@ body{
 }
 
 .container{
-    min-width: 80vh;
+    min-width: 80vh; 
 }
 
 .containerFil{
@@ -308,6 +308,18 @@ label.form-label {
     margin-top: 5%;
     text-align: center;
     padding-bottom: 30%;
+}
+
+.container-lista-secretaria {
+    min-width: 80vh;
+    min-height: 360px !important;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .container-tabla-secretaria {
