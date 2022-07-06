@@ -2,10 +2,10 @@
 {include file="navBar.tpl"}
 
 <main class="container">
-
+{include file="subNavAdmin.tpl"}
 
     <div class="row">
-        {include file="subNavAdmin.tpl"}
+        
 
         <h1 class=" my-4" >Agregar un Doctor</h1>
         <form method="POST" action="cargarMedico" style="width: 90vh">
@@ -54,7 +54,7 @@
             <div>
                 <div class="input-group mb-3 mt-4">
                 <span class="input-group-text" >Contraseña</span>
-                <input name="contrasenia" type="text" class="form-control" placeholder="Ingrese la contraseña a asignar">
+                <input name="contrasenia" type="password" class="form-control" placeholder="Ingrese la contraseña a asignar">
                 </div>
             </div>
 

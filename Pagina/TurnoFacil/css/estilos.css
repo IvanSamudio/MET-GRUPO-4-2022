@@ -4,7 +4,8 @@ body{
 }
 
 .container{
-    min-width: 80vh; 
+    min-width: 80vh;
+    display: block; 
 }
 
 .containerFil{
@@ -153,7 +154,7 @@ img {
     color: #F2F2F2 !important;
 }
 
-li{
+.navAdmin li{
     margin: 8% 0px 6% 0px;
     width: 100%; 
 }
@@ -443,7 +444,11 @@ label.form-label {
     background-color: rgb(111, 111, 111);
 }
 
-@media screen and (max-width: 1655px) {
+.listaAsignar{
+    padding-top: 20px;
+}
+
+@media screen and (max-width: 2560px) {
     .datosFooter ul{
         font-size:medium;
     }

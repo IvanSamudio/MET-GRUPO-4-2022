@@ -1,17 +1,18 @@
 {include file="Header.tpl"}
 {include file="navBar.tpl"}
+<main class="container">
+{include file="subNavAdmin.tpl"}  
+    <div class="container-lista-secretaria">
 
-<div class="container-lista-secretaria "  style="width: 200vh">
-
-    <h1 class=" my-4" >Agregar secretaria</h1>
-    <form class="form-secretaria" action="cargarSecretaria" method="POST">
+        <h1 class="my-4" >Agregar secretaria</h1>
+        <form class="form-secretaria" action="cargarSecretaria" method="POST" style="width: 90vh">
         <div class="input-group">
             <label class="input-group-text">Nombre de Usuario</label>
             <input type="text" class="form-control" name="nombreUsuario" required>
         </div>
         <div class="input-group">
             <label class="input-group-text">Contraseña</label>
-            <input type="text" class="form-control" name="contrasenia" required>
+            <input type="password" class="form-control" name="contrasenia" required>
         </div>
         <div class="input-group">
             <label class="input-group-text">Nombre</label>
@@ -29,6 +30,7 @@
             <input type="submit" class="btn btn-primary boton-cargar-secretaria" value="Guardar">
             <a href="mostrarPersonal">Volver</a> 
         </div>
-    </form> 
-</div>
+        </form> 
+    </div>
+</main>
 {include file="Footer.tpl"}
