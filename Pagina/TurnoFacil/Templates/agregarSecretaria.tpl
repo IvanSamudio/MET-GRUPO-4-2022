@@ -1,7 +1,7 @@
 {include file="Header.tpl"}
 {include file="navBar.tpl"}
 
-<main class="container">
+<div class="container-lista-secretaria">
     {include file="subNavAdmin.tpl"}
     <form class="form-secretaria" action="cargarSecretaria" method="POST">
         <div class="input-group">
@@ -29,5 +29,5 @@
             <input type="submit" class="btn btn-primary boton-cargar-secretaria" value="CARGAR">
         </div>
     </form> 
-</main>
+</div>
 {include file="Footer.tpl"}
