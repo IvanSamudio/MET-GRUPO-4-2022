@@ -17,17 +17,18 @@ class ConfigApp
         'medicosConObra' => 'MedicoController#filtroMedico',
         'filtroTurnos'=> 'TurnoFacilController#getHorariosTurnoMedico',
         'notificar'=> 'TurnoFacilController#notificar_turno',
-        'asignadorMedicos'=> 'TurnoFacilController#mostrarAsignadorMedicos',
-        'asignarMedico'=> 'TurnoFacilController#AsignarMedico',
-        'mostrarPersonal'=> 'TurnoFacilController#mostrarPersonal',
-        'agregarSecretaria'=> 'TurnoFacilController#mostrarFormSecretaria',
-        'cargarSecretaria'=> 'TurnoFacilController#cargarSecretaria',
-        'agregarMedico'=> 'TurnoFacilController#mostrarFormMedico',
-        'cargarMedico'=> 'TurnoFacilController#cargarMedico',
+
+        'asignadorMedicos'=> 'AdminController#mostrarAsignadorMedicos',
+        'asignarMedico'=> 'AdminController#AsignarMedico',
+        'mostrarPersonal'=> 'AdminController#mostrarPersonal',
+        'agregarSecretaria'=> 'AdminController#mostrarFormSecretaria',
+        'cargarSecretaria'=> 'AdminController#cargarSecretaria',
+        'agregarMedico'=> 'AdminController#mostrarFormMedico',
+        'cargarMedico'=> 'AdminController#cargarMedico',
         'verificarLogin' => 'LoginController#verificarLogin',
         'logOut' => 'LoginController#logOut',
-        'mostrarSecretaria'=> 'TurnoFacilController#mostrarSecretaria',
-        'mostrarMedico'=> 'TurnoFacilController#mostrarMedico',
+        'mostrarSecretaria'=> 'AdminController#mostrarSecretaria',
+        'mostrarMedico'=> 'AdminController#mostrarMedico',
 
     ];
 

@@ -20,6 +20,7 @@
             <span class="input-group-text">Apellido</span>
             <input name="apellido" type="text" class="form-control" placeholder="Ingrese un apellido">
             </div>
+            
 
             <div class="input-group mb-3">
             <span class="input-group-text">Telefono</span>
@@ -50,7 +51,14 @@
                         {/foreach}
                 </select>
             </div>
-                        <div class="row my-4 border-top">
+                        <div class="row my-4 border-top"></div>
+                        
+            <div class="input-group mb-3 mt-4">
+                
+                <label class="input-group-text">Nombre de Usuario</label>
+                <input type="text" class="form-control" name="nombreUsuario" required>
+
+            </div>
             <div>
                 <div class="input-group mb-3 mt-4">
                 <span class="input-group-text" >Contraseña</span>

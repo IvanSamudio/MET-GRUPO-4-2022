@@ -21,12 +21,6 @@ class MedicoController{
         //$this->view->showHomeLocation();
     }
 
-    function mostrarMedicos(){
-        $medicos = $this->model->getAllObraSociales();
-        $this->MedicoView->mostrar($medicos);
-        // var_dump($medicos);
-    }
-
     function mostrarMedicosPorEspecialidad($especialidad){
         $this->model->GetMedicosPorEspecialidad($especialidad);
     }

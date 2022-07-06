@@ -1,7 +1,7 @@
 <?php
 
 require_once  "../View/TurnoFacilView.php";
-require_once  "../Model/TurnoFacilModel.php";
+require_once  "../Model/AdminModel.php";
 
 
 class LoginController
@@ -13,7 +13,7 @@ class LoginController
   function __construct()
   {
     $this->view = new TurnoFacilView();
-    $this->model = new TurnoFacilModel();
+    $this->model = new AdminModel();
     $this->Titulo = "Turno Facil";
   }
 

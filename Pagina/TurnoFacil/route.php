@@ -9,6 +9,7 @@ require_once "config/ConfigApp.php";
 require_once "../Controller/TurnoFacilController.php";
 require_once "../Controller/MedicoController.php";
 require_once "../Controller/LoginController.php";
+require_once "../Controller/AdminController.php";
 
 
 function parseURL($url)
