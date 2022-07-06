@@ -10,7 +10,7 @@
             <ul class="list-group">
                 {foreach from=$medicos item=medico}
                 {if $medico->id_secretaria eq $secretaria->id_secretaria}
-                    <li class="list-group-item">{$medico->medico_nombre}</li>
+                    <li class="list-group-item">{$medico->medico_nombre} {$medico->medico_apellido}</li>
                 {/if}
                 {/foreach}
             </ul>
