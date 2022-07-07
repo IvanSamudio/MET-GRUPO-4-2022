@@ -113,7 +113,7 @@ footer{
 }
 
 .container{
-    min-height: 360px !important;
+    min-height: 70vh;
 }
 
 header{

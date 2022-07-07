@@ -77,4 +77,4 @@
     </div>
     </div>
 </main>
-{* {include file="Footer.tpl"} *}
+{include file="Footer.tpl"}
