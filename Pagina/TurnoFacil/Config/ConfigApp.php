@@ -11,23 +11,24 @@ class ConfigApp
     public static $PARAMS = 'params';
     public static $ACTIONS = [
         '' => 'LoginController#mostrarLogin',
-        'home'=> 'TurnoFacilController#Home',
-        'MostrarTurnos' => 'TurnoFacilController#getTurnosMedico',
+        'home'=> 'PacienteController#Home',
+        'MostrarTurnos' => 'PacienteController#getTurnosMedico',
         'filtrar_medicos'=> 'MedicoController#mostrarTodasEspecialidadesyObra',
         'medicosConObra' => 'MedicoController#filtroMedico',
-        'filtroTurnos'=> 'TurnoFacilController#getHorariosTurnoMedico',
-        'notificar'=> 'TurnoFacilController#notificar_turno',
-        'asignadorMedicos'=> 'TurnoFacilController#mostrarAsignadorMedicos',
-        'asignarMedico'=> 'TurnoFacilController#AsignarMedico',
-        'mostrarPersonal'=> 'TurnoFacilController#mostrarPersonal',
-        'agregarSecretaria'=> 'TurnoFacilController#mostrarFormSecretaria',
-        'cargarSecretaria'=> 'TurnoFacilController#cargarSecretaria',
-        'agregarMedico'=> 'TurnoFacilController#mostrarFormMedico',
-        'cargarMedico'=> 'TurnoFacilController#cargarMedico',
+        'filtroTurnos'=> 'PacienteController#getHorariosTurnoMedico',
+        'notificar'=> 'PacienteController#notificar_turno',
+
+        'asignadorMedicos'=> 'AdminController#mostrarAsignadorMedicos',
+        'asignarMedico'=> 'AdminController#AsignarMedico',
+        'mostrarPersonal'=> 'AdminController#mostrarPersonal',
+        'agregarSecretaria'=> 'AdminController#mostrarFormSecretaria',
+        'cargarSecretaria'=> 'AdminController#cargarSecretaria',
+        'agregarMedico'=> 'AdminController#mostrarFormMedico',
+        'cargarMedico'=> 'AdminController#cargarMedico',
         'verificarLogin' => 'LoginController#verificarLogin',
         'logOut' => 'LoginController#logOut',
-        'mostrarSecretaria'=> 'TurnoFacilController#mostrarSecretaria',
-        'mostrarMedico'=> 'TurnoFacilController#mostrarMedico',
+        'mostrarSecretaria'=> 'AdminController#mostrarSecretaria',
+        'mostrarMedico'=> 'AdminController#mostrarMedico',
 
     ];
 

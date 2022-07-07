@@ -6,9 +6,10 @@ define('PARAMS', 1);
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
 
 require_once "config/ConfigApp.php";
-require_once "../Controller/TurnoFacilController.php";
 require_once "../Controller/MedicoController.php";
 require_once "../Controller/LoginController.php";
+require_once "../Controller/AdminController.php";
+require_once "../Controller/PacienteController.php";
 
 
 function parseURL($url)
